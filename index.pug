@@ -6,8 +6,7 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title siteTruth
         link(href="./css/styles.min.css", rel="stylesheet")
-    body
-        h1 siteTruth
+    body(style="padding: 10px; min-height: 200vh")
         a(href="#").button.button-primary Установить
         br
         br
@@ -17,5 +16,10 @@ html(lang="ru")
         div(style="background: #FF7663; padding: 30px")
             a(href="#").button.button-white-outline.active Вход
             a(href="#").button.button-white Регистрация
+        br
+        br
+        .checked
+            img(src="./img/icons/checkbox.svg", alt="checkbox")
+            p “В случае большого количества жалоб со стороны <br> пользователей, принимаем участие в блокировке сайта.
 
         script(src="./js/main.min.js")
