@@ -48,7 +48,7 @@ $box-shadow: 0px 10px 50px rgba($orange-color, 0.5)
             color: $white-color
             border-color: transparent
             border: 0px
-            margin: 2px 0 0 2px
+            margin: 2px
             &:before
                 background-image: url('../img/icons/play-white.svg')
         &.active
@@ -59,6 +59,31 @@ $box-shadow: 0px 10px 50px rgba($orange-color, 0.5)
                 background-image: url('../img/icons/play-white.svg')
             &:hover
                 background: $linear-gradient
-
-.button-watch:hover + .button-watch:before
-    background-image: url('../img/icons/play-white.svg')!important
+    &-white
+        padding: 1.5rem 4rem 1.5rem 4rem
+        border-radius: 10px
+        font-weight: 600
+        color: $cherry-color
+        background-color: $white-color
+        &:hover
+            border: 2px solid $white-color
+            background-color: transparent!important
+            color: $white-color
+            margin: -2px 0 0 -2px
+            padding: 1.3rem 4rem 1.3rem 4rem
+        &.active
+            color: $white-color
+            background-color: transparentize($white-color, .5)
+        &-outline
+            padding: 1.3rem 4rem 1.3rem 4rem
+            border-radius: 10px
+            font-weight: 600
+            color: $white-color
+            border: 2px solid $white-color
+            &:hover
+                color: $cherry-color!important
+                background-color: $white-color!important
+            &.active
+                color: $white-color
+                background-color: transparentize($white-color, .5)
+                border: 2px solid transparent
