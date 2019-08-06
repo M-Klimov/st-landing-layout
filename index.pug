@@ -6,69 +6,67 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title siteTruth
         link(href="./css/styles.min.css", rel="stylesheet")
-    body(style="padding: 10px; min-height: 200vh")
-        a(href="#").button.button-primary Установить
-        br
-        br
-        a(href="#").button.button-watch Смотреть видео
-        br
-        br
-        div(style="background: #FF7663; padding: 30px")
-            a(href="#").button.button-white-outline.active Вход
-            a(href="#").button.button-white Регистрация
-        br
-        br
-        .checked
-            img(src="./img/icons/checkbox.svg", alt="checkbox")
-            p “В случае большого количества жалоб со стороны <br> пользователей, принимаем участие в блокировке сайта.
-        br
-        br
-        .search
-            input(placeholder="Начните вводить название сайта")
-        ul.search-list
-            li
-                span.num 01
-                span.title apple.com
-                span.like 9 827
-                span.dislike 1 634
-                span.star 98/100
-            li
-                span.num 02
-                span.title amazone.com
-                span.like 325
-                span.dislike 74
-                span.star 98/100
-            li
-                span.num 03
-                span.title amazone.comamazone.com
-                span.like 831
-                span.dislike 1 634
-                span.star 98/100
-            li
-                span.num 04
-                span.title vk.com
-                span.like 9 827
-                span.dislike 58
-                span.star 98/100
-            li
-                span.num 05
-                span.title apple.com
-                span.like 1 237
-                span.dislike 765
-                span.star 98/100
-        
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero incidunt labore quidem voluptates dignissimos voluptatibus saepe tempore laboriosam. Ab eos voluptates ratione eaque autem fugiat nobis libero quam harum dolorem amet enim ea, velit corporis debitis saepe? Quae quis aliquam neque molestiae voluptatibus modi incidunt commodi, autem ducimus, eveniet temporibus odit blanditiis error accusantium? Quis voluptatum, dolore incidunt libero quibusdam sapiente harum et? Similique, accusamus vero cupiditate optio commodi possimus atque officiis. Reiciendis repellat adipisci numquam aliquam sequi expedita perspiciatis et alias nesciunt consectetur! Et a voluptates tempora soluta. Repellat, quis natus? Pariatur consectetur distinctio similique? Illum facilis ipsum labore? Ullam cupiditate iusto alias eaque neque? Omnis dolore fugiat nostrum necessitatibus perspiciatis, atque quas, repellendus aperiam tempore saepe nulla aliquid fuga soluta incidunt possimus ducimus. Similique, assumenda voluptatem modi suscipit, odit voluptatum sit in deleniti excepturi dolor facilis ipsum corrupti repellendus ullam architecto soluta eligendi laudantium magni dolorem rerum pariatur aliquid inventore porro eos. Sequi esse eum at ex, blanditiis fugiat. Cupiditate laboriosam consectetur optio quasi minima nobis eveniet sapiente? Aut facere quis libero esse consectetur cumque est natus consequatur maxime modi, ea sequi minus at voluptates veniam perferendis optio, a ad cupiditate. Dolore impedit atque harum labore quia ratione.
-        br
-        br
-        .advantage
-            .box
-                img(src="./img/icons/sitemap.svg")
-            span Отзывы о любом сайте
-        br
-        .advantage
-            .box
-                img(src="./img/icons/page.svg")
-            span Отзывы о любой странице
+    body
+
+        section.s1
+            .col
+                .search
+                    input(placeholder="Начните вводить название сайта")
+                ul.search-list
+                    li
+                        span.num 01
+                        span.title apple.com
+                        span.like 9 827
+                        span.dislike 1 634
+                        span.star 98/100
+                    li
+                        span.num 02
+                        span.title amazone.com
+                        span.like 325
+                        span.dislike 74
+                        span.star 98/100
+                    li
+                        span.num 03
+                        span.title amazone.comamazone.com
+                        span.like 831
+                        span.dislike 1 634
+                        span.star 98/100
+                    li
+                        span.num 04
+                        span.title vk.com
+                        span.like 9 827
+                        span.dislike 58
+                        span.star 98/100
+                    li
+                        span.num 05
+                        span.title apple.com
+                        span.like 1 237
+                        span.dislike 765
+                        span.star 98/100
+                
+                h2 Возможность комментировать все 
+                h3 что есть в интернете 
+                a(href="#").button.button-primary Установить
+                a(href="#").button.button-watch Смотреть видео
+            .col
+                ul.lang
+                    li.active RU
+                    li EN
+                    li UA
+                a(href="#").button.button-white-outline Вход
+                a(href="#").button.button-white Регистрация
+        section
+        section
+        section
+        section
+        section
+        section
+        section
+        section
+        section
+        section
+        section
+        section
 
         script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
         script(src="./js/main.min.js")
