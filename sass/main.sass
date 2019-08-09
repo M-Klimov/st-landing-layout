@@ -37,6 +37,17 @@ a
             margin: 0 0 5.2rem 0
         .button-primary
             margin-right: 3.5rem
+        .union
+            background-image: url('../img/icons/union.svg')
+            background-size: cover
+            display: block
+            position:
+            height: 9.472rem
+            width: 9.38rem
+            &.left
+                margin: 33.5rem 0 0 13rem
+            &.right
+                margin: 14rem 0 0 97.4rem
     .col:last-child
         background-color: $cherry-color
         background-image: url('../img/man.png')
@@ -64,3 +75,61 @@ a
                 margin-right: 3rem
                 &.active
                     color: $white-color
+
+.s2
+    background: $linear-gradient2
+    color: $white-color
+    padding-bottom: 19rem         
+    .row:first-child
+        display: flex
+        justify-content: center
+        padding-bottom: 11.8rem
+        .smile
+            padding: 20rem 19.5rem 0 19.5rem 
+            margin-top: -27rem
+        .extension
+            width: 60.552rem
+            height: 72.662rem
+            border-radius: 22px
+            margin-top: -27rem
+            box-shadow: 0px 7rem 25rem rgba(0, 0, 0, 0.36)
+    .row:nth-child(2)
+        display: flex
+        justify-content: space-around
+        padding: 0 13.6rem 0 12.7rem
+        margin-bottom: 13.4rem
+    .col
+        h2
+            font-size: 5.5rem
+            font-weight: bold
+            line-height: 11rem
+            span
+                font-size: 7.5rem
+                background: $linear-gradient
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        a
+            color: $cherry-color
+            font-size: 4.5rem
+            line-height: 5.4rem
+            font-weight: bold
+            margin-top: 12.3rem
+            display: block
+            &:after
+                content: ''
+                display: inline-block
+                margin: 0 0 .55rem 2.9rem
+                height: 1.955rem
+                width: 4.4rem
+                background-image: url('../img/icons/arrow-download.svg')
+        ul
+            margin-top: 6rem
+            list-style-image: url('../img/icons/ellipse.svg')
+            li
+                font-size: 3rem
+                line-height: 4.5rem
+                margin-bottom: 4rem
+
+@media(max-width: 1920px)
+    html
+        font-size: 7px
