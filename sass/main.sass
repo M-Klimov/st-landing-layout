@@ -1,15 +1,15 @@
 @import 'vendors/normalize'
 @import 'colors'
-@import 'fonts'
 @import 'animation'
 @import 'components/button'
 @import 'components/checked'
 @import 'components/search'
 @import 'components/advantage'
+@import url('https://rsms.me/inter/inter.css')
 
 html
     font-size: 10px
-    font-family: 'Inter'
+    font-family: 'Inter', sans-serif
 
 a
     text-decoration: none
@@ -33,6 +33,9 @@ section:nth-child(n+3)
         font-size: 7rem
         text-align: center
         margin: 0
+
+.full-section
+    height: 100vh
 
 .s1
     display: flex
@@ -114,11 +117,14 @@ section:nth-child(n+3)
         padding: 0 13.6rem 0 12.7rem
         margin-bottom: 13.4rem
     .row:last-child
-        display: flex
-        justify-content: space-between
         padding: 0 31rem
-        img
-            max-height: 10rem
+        .slide
+            display: flex
+            justify-content: space-between
+            width: 100wh
+            img
+                margin-right: 7.9rem
+                max-height: 10rem
     .col
         h2
             color: $white-color
