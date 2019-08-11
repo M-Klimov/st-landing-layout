@@ -1,3 +1,4 @@
+@import url('https://rsms.me/inter/inter.css')
 @import 'vendors/normalize'
 @import 'colors'
 @import 'animation'
@@ -5,7 +6,18 @@
 @import 'components/checked'
 @import 'components/search'
 @import 'components/advantage'
-@import url('https://rsms.me/inter/inter.css')
+@import 'components/section-controllers'
+
+@import 'sections/section1'
+@import 'sections/section2'
+@import 'sections/section3'
+// @import 'sections/section4'
+// @import 'sections/section5'
+// @import 'sections/section6'
+// @import 'sections/section7'
+// @import 'sections/section8'
+// @import 'sections/section9'
+// @import 'sections/section10'
 
 html
     font-size: 10px
@@ -26,7 +38,7 @@ section:nth-child(n+3)
         font-weight: bold
         font-size: 2.5rem
         text-align: center
-        margin: 10rem 0 0 0 
+        margin: 0
     h2
         color: $black-color 
         font-weight: bold
@@ -35,130 +47,11 @@ section:nth-child(n+3)
         margin: 0
 
 .full-section
-    height: 100vh
-
-.s1
+    height: calc(100vh - 12.5rem - 10rem)
+    padding: 12.5rem 21.2rem 10rem 21.2rem
     display: flex
-    min-height: 42.5vw
-    .col:first-child
-        padding: 8.1rem 0 0 12.7rem 
-        width: 54%
-        h2
-            font-weight: bold
-            font-size: 6rem
-            color: $black-color
-            line-height: 10.2rem
-            margin: 18rem 0 0 0
-        h3
-            font-weight: 500
-            font-size: 4rem
-            line-height: 10.2rem
-            color: $grey5-color
-            margin: 0 0 5.2rem 0
-        .button-primary
-            margin-right: 3.5rem
-        .union
-            background-image: url('../img/icons/union.svg')
-            background-size: cover
-            display: block
-            position:
-            height: 9.472rem
-            width: 9.38rem
-            &.left
-                margin: 33.5rem 0 0 13rem
-            &.right
-                margin: 14rem 0 0 97.4rem
-    .col:last-child
-        background-color: $cherry-color
-        background-image: url('../img/man.png')
-        background-size: 170%
-        background-position: 48% top
-        background-repeat: no-repeat
-        width: 36%
-        padding: 10rem 12.7rem 0 11.6rem
-        display: flex
-        align-items: flex-start
-        justify-content: space-between
-        .button-white-outline
-            margin-left: auto
-            margin-right: 3.9rem
-        .lang
-            display: flex
-            margin: 0
-            padding: 0
-            li
-                color: transparentize($white-color, .5)
-                list-style: none
-                font-weight: 600
-                font-size: 2.5rem
-                line-height: 3rem
-                margin-right: 3rem
-                &.active
-                    color: $white-color
-
-.s2
-    padding-bottom: 19rem
-    .row:first-child
-        display: flex
-        justify-content: center
-        padding-bottom: 11.8rem
-        .smile
-            padding: 20rem 19.5rem 0 19.5rem 
-            margin-top: -27rem
-        .extension
-            width: 60.552rem
-            height: 72.662rem
-            border-radius: 22px
-            margin-top: -27rem
-            box-shadow: 0px 7rem 25rem rgba(0, 0, 0, 0.36)
-    .row:nth-child(2)
-        display: flex
-        justify-content: space-around
-        padding: 0 13.6rem 0 12.7rem
-        margin-bottom: 13.4rem
-    .row:last-child
-        padding: 0 31rem
-        .slide
-            display: flex
-            justify-content: space-between
-            width: 100wh
-            img
-                margin-right: 7.9rem
-                max-height: 10rem
-    .col
-        h2
-            color: $white-color
-            font-size: 5.5rem
-            font-weight: bold
-            line-height: 11rem
-            span
-                font-size: 7.5rem
-                background: $linear-gradient
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
-        a
-            color: $cherry-color
-            font-size: 4.5rem
-            line-height: 5.4rem
-            font-weight: bold
-            margin-top: 12.3rem
-            display: block
-            &:after
-                content: ''
-                display: inline-block
-                margin: 0 0 .55rem 2.9rem
-                height: 1.955rem
-                width: 4.4rem
-                background-image: url('../img/icons/arrow-download.svg')
-                background-size: cover
-        ul
-            color: $white-color
-            margin-top: 6rem
-            list-style-image: url('../img/icons/ellipse.svg')
-            li
-                font-size: 3rem
-                line-height: 4.5rem
-                margin-bottom: 4rem
+    flex-direction: column
+    justify-content: space-between
 
 @media(max-width: 1920px)
     html

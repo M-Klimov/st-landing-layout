@@ -1,3 +1,5 @@
+include mixins
+
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -9,7 +11,7 @@ html(lang="ru")
         link(href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", rel="stylesheet")
     body
 
-        section.s1
+        section.section1
             .col
                 .search
                     input(placeholder="Начните вводить название сайта")
@@ -59,7 +61,7 @@ html(lang="ru")
                 a(href="#").button.button-white-outline Вход
                 a(href="#").button.button-white Регистрация
 
-        section.s2.bg-primary
+        section.section2.bg-primary
             .row
                 img(src="./img/extension.png", alt="smile").extension
                 img(src="./img/icons/smile.svg", alt="smile").smile
@@ -92,29 +94,65 @@ html(lang="ru")
                     img(src="./img/logos/amazon.png", alt="amazon")
                     img(src="./img/logos/fb.png", alt="fb")
 
-        section.s3.full-section
-            h3 УДОБНО
-            h2 О расширении
+        section.section3.full-section
+            .row
+                h3 УДОБНО
+                h2 О расширении
+            .row
+                .col
+                    h3 <span>Удобно.</span><br> Не нужно ничего искать 
+                    p Отзывы прямо в расширении браузера.
+                    .advantage
+                        .box
+                            img(src="./img/icons/sitemap.svg")
+                        span Отзывы о любом сайте
+                    .advantage
+                        .box
+                            img(src="./img/icons/page.svg")
+                        span Отзывы о любой странице
+                .col
+                    img(src="./img/screen.png", alt="screen").screen
 
-        section.s4.bg-primary.full-section
+            +section-controllers('01')
 
-        section.s5.full-section
+        section.section4.bg-primary.full-section
+            .row
+                h3 НАДЕЖНОСТЬ
+                h2 О расширении
+            .row
+                .col
+                    h3 <span>Удобно.</span><br> Не нужно ничего искать 
+                    p Отзывы прямо в расширении браузера.
+                    .advantage
+                        .box
+                            img(src="./img/icons/sitemap.svg")
+                        span Отзывы о любом сайте
+                    .advantage
+                        .box
+                            img(src="./img/icons/page.svg")
+                        span Отзывы о любой странице
+                .col
+                    img(src="./img/screen.png", alt="screen")
 
-        section.s6.bg-primary.full-section
+            +section-controllers('02')
 
-        section.s7.full-section
+        section.section5.full-section
 
-        section.s8.bg-primary.full-section
+        section.section6.bg-primary.full-section
 
-        section.s9.full-section
+        section.section7.full-section
 
-        section.s10.bg-primary.full-section
+        section.section8.bg-primary.full-section
 
-        section.s11
+        section.section9.full-section
 
-        section.s12.bg-primary
+        section.section10.bg-primary.full-section
 
-        section.s13
+        section.section11
+
+        section.section12.bg-primary
+
+        section.section13
 
 
         script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
