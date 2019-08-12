@@ -14,4 +14,14 @@ $(() => {
             search.removeClass('active');
         }
     })
+
+    $('.slider-logos').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        prevArrow: false,
+        nextArrow: false,
+        variableWidth: true
+    });
 });

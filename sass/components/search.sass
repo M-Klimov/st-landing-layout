@@ -19,6 +19,7 @@
         height: 2.5rem
         width: 2.5rem
         margin: 1.7rem 0 0 1.9rem
+        background-size: cover
     &.active
         &:before
             background-image: url('../img/icons/search-active.svg')
@@ -37,6 +38,7 @@
             color: $grey-color
     &-list
         display: none
+        z-index: 100
         background-color: $white-color
         color: $black-color
         position: absolute
@@ -70,6 +72,7 @@
                     width: 1.9rem
                     margin: 0 .85rem -0.2rem 0
                     background: url('../img/icons/like.svg') no-repeat top right
+                    background-size: cover
             .dislike
                 min-width: 10.7rem
                 &:before
@@ -79,6 +82,7 @@
                     width: 1.9rem
                     margin: 0 .85rem -0.2rem 0
                     background: url('../img/icons/dislike.svg') no-repeat top right
+                    background-size: cover
             .star
                 &:before
                     content: ''
@@ -87,3 +91,4 @@
                     width: 1.8rem
                     margin: 0 .85rem -0.2rem 0
                     background: url('../img/icons/star.svg') no-repeat top right
+                    background-size: cover
