@@ -1,16 +1,15 @@
-include mixins
-
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=1200, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title siteTruth
         link(href="./css/styles.min.css", rel="stylesheet")
         link(href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", rel="stylesheet")
     body
 
+        //-
         section.section1
             .col
                 .search
@@ -57,9 +56,7 @@ html(lang="ru")
                 ul.lang
                     li.active RU
                     li EN
-                    li UA
-                a(href="#").button.button-white-outline Вход
-                a(href="#").button.button-white Регистрация
+                    li UA 
 
         section.section2.bg-primary
             .row
@@ -77,83 +74,136 @@ html(lang="ru")
                         li интернет-магазины (конкретные товары их группы и магазины в целом)
                         li всевозможные компании и все остальные сайты, все у чего <br> есть ссылка
             .row.slider-logos
-                .slide
-                    img(src="./img/logos/vk.png", alt="vk")
-                    img(src="./img/logos/aliexpress.png", alt="aliexpress")
-                    img(src="./img/logos/youtube.png", alt="youtube")
-                    img(src="./img/logos/prom.png", alt="prom")
-                    img(src="./img/logos/olx.png", alt="olx")
-                    img(src="./img/logos/amazon.png", alt="amazon")
-                    img(src="./img/logos/fb.png", alt="fb")
-                .slide
-                    img(src="./img/logos/vk.png", alt="vk")
-                    img(src="./img/logos/aliexpress.png", alt="aliexpress")
-                    img(src="./img/logos/youtube.png", alt="youtube")
-                    img(src="./img/logos/prom.png", alt="prom")
-                    img(src="./img/logos/olx.png", alt="olx")
-                    img(src="./img/logos/amazon.png", alt="amazon")
-                    img(src="./img/logos/fb.png", alt="fb")
-
+                object(type="image/svg+xml" data="./img/logos/vk.svg")
+                object(type="image/svg+xml" data="./img/logos/facebook.svg")
+                object(type="image/svg+xml" data="./img/logos/youtube.svg")
+                object(type="image/svg+xml" data="./img/logos/amazon.svg")
+                object(type="image/svg+xml" data="./img/logos/prom.svg")
+                object(type="image/svg+xml" data="./img/logos/olx.svg")
+                object(type="image/svg+xml" data="./img/logos/aliexpress.svg")
         section.section3.full-section
-            .row
-                h3 УДОБНО
-                h2 О расширении
-            .row
-                .col
-                    h3 <span>Удобно.</span><br> Не нужно ничего искать 
-                    p Отзывы прямо в расширении браузера.
-                    .advantage
-                        .box
-                            img(src="./img/icons/sitemap.svg")
-                        span Отзывы о любом сайте
-                    .advantage
-                        .box
-                            img(src="./img/icons/page.svg")
-                        span Отзывы о любой странице
-                .col
-                    img(src="./img/screen.png", alt="screen").screen
+            .big-slider
+                .slide
+                    .row
+                        h3 УДОБНО
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 #[span Удобно.] #[br] Не нужно ничего искать 
+                            p Отзывы прямо в расширении браузера.
+                            .advantage
+                                .box
+                                    img(src="./img/icons/sitemap.svg")
+                                span Отзывы о любом сайте
+                            .advantage
+                                .box
+                                    img(src="./img/icons/page.svg")
+                                span Отзывы о любой странице
+                        .col
+                            img.screen(src="./img/screen.png", alt="screen")
+                            span.union.left
+                            span.union.right
+                .slide
+                    .row
+                        h3 НАДЕЖНО
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 Невозможно скрыться
+                            p Не важно вы хотите оставить отзыв о сайте, о его пользователе или определенной странице, если у этого есть ссылка - вы можете оставить отзыв в нашем расширении.
+                            a(href="#").button.button-primary Установить
+                            a(href="#").button.button-watch Смотреть видео
+                        .col
+                            img.screen(src="./img/man-server.svg", alt="man-server")
+                .slide
+                    .row
+                        h3 УНИКАЛЬНО
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 #[span Таких] #[br] продуктов больше нет на рынке. 
+                            p Отзывы прямо в расширении браузера.
+                            .advantage
+                                .box
+                                    img(src="./img/icons/sitemap.svg")
+                                span Отзывы о любом сайте
+                            .advantage
+                                .box
+                                    img(src="./img/icons/page.svg")
+                                span Отзывы о любой странице
+                        .col
+                            img.screen(src="./img/uniquely.svg", alt="uniquely")
+                .slide
+                    .row
+                        h3 РАЗУМНО
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 Экономим ваше время и деньги
+                            p Во избежание пустой сраницы, здесь и на каждой “пустой странице” лучше написать короткий текст-описание, кол-во символов не больше, чем тут, иначе читать не будут.
+                            a(href="#").button.button-primary Установить
+                            a(href="#").button.button-watch Смотреть видео
+                        .col
+                            img.screen(src="./img/reasonably.svg", alt="reasonably")
+                .slide
+                    .row
+                        h3 НА ВЕКА
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 На века!
+                            p Отзывы никто не может удалить или изменить, кроме его создателя.
+                            a(href="#").button.button-primary Установить
+                            a(href="#").button.button-watch Смотреть видео
+                        .col
+                            img.screen(src="./img/reliably.svg", alt="reliably")
+                .slide
+                    .row
+                        h3 АНОНИМНОСТЬ
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 Анонимность
+                            p Каждый отзыв вы можете оставить анонимно либо в открытом виде. В настройках вы можете указать свой инстаграм, телеграм либо любой другой контакт, если захотите.
+                            a(href="#").button.button-primary Установить
+                            a(href="#").button.button-watch Смотреть видео
+                        .col
+                            img.screen(src="./img/anonymously.svg", alt="anonymously")
+                .slide
+                    .row
+                        h3 ОТКРЫТОСТЬ
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 Открытость
+                            p Каждый отзыв вы можете оставить анонимно либо в открытом виде. В настройках вы можете указать свой инстаграм, телеграм либо любой другой контакт, если захотите.
+                            a(href="#").button.button-primary Установить
+                            a(href="#").button.button-watch Смотреть видео
+                        .col
+                            img.screen(src="./img/openness.svg", alt="openness")
+                .slide
+                    .row
+                        h3 АНОНИМНОСТЬ
+                        h2 О расширении
+                    .row
+                        .col
+                            h3 Анонимность
+                            p Каждый отзыв вы можете оставить анонимно либо в открытом виде. В настройках вы можете указать свой инстаграм, телеграм либо любой другой контакт, если захотите.
+                            a(href="#").button.button-primary Установить
+                            a(href="#").button.button-watch Смотреть видео
+                        .col
+                            img.screen(src="./img/artificial-Intelligence.svg", alt="artificial-Intelligence")
+            .slide-nav
+                .wrapper
+                    .slide-arrows
+                    .slide-dots
+                    .slide-counter
 
-            +section-controllers('01')
+        section.section4.full-section
 
-        section.section4.bg-primary.full-section
-            .row
-                h3 НАДЕЖНОСТЬ
-                h2 О расширении
-            .row
-                .col
-                    h3 <span>Удобно.</span><br> Не нужно ничего искать 
-                    p Отзывы прямо в расширении браузера.
-                    .advantage
-                        .box
-                            img(src="./img/icons/sitemap.svg")
-                        span Отзывы о любом сайте
-                    .advantage
-                        .box
-                            img(src="./img/icons/page.svg")
-                        span Отзывы о любой странице
-                .col
-                    img(src="./img/screen.png", alt="screen")
-
-            +section-controllers('02')
-
+        
+        
         section.section5.full-section
-
-        section.section6.bg-primary.full-section
-
-        section.section7.full-section
-
-        section.section8.bg-primary.full-section
-
-        section.section9.full-section
-
-        section.section10.bg-primary.full-section
-
-        section.section11
-
-        section.section12.bg-primary
-
-        section.section13
-
 
         script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
         script(src="./js/main.min.js")

@@ -2,14 +2,16 @@
     display: flex
     min-height: 42.5vw
     .col:first-child
-        padding: 8.1rem 0 0 12.7rem 
+        padding: 8.1rem 12.7rem 46rem
         width: 54%
+        box-sizing: border-box
+        position: relative
         h2
             font-weight: bold
             font-size: 6rem
             color: $black-color
             line-height: 10.2rem
-            margin: 18rem 0 0 0
+            margin-top: 18rem
         h3
             font-weight: 500
             font-size: 4rem
@@ -25,24 +27,25 @@
             position:
             height: 9.472rem
             width: 9.38rem
+            position: absolute
+            z-index: -1
             &.left
-                margin: 33.5rem 0 0 13rem
+                bottom: 3.5rem
+                left: 25rem
             &.right
-                margin: 14rem 0 0 97.4rem
+                right: 30rem
+                bottom: 23rem
     .col:last-child
         background-color: $cherry-color
         background-image: url('../img/man.png')
         background-size: 170%
         background-position: 48% top
         background-repeat: no-repeat
-        width: 36%
+        width: 38%
         padding: 10rem 12.7rem 0 11.6rem
         display: flex
         align-items: flex-start
-        justify-content: space-between
-        .button-white-outline
-            margin-left: auto
-            margin-right: 3.9rem
+        justify-content: flex-end
         .lang
             display: flex
             margin: 0
