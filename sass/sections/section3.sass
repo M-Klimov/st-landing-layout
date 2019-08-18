@@ -1,24 +1,186 @@
 .section3
-    .col
-        h3
-            font-size: 3.5rem
-            line-height: 5.2rem
-            color: $dark-color
-            text-align: left
-            span
-                color: $cherry-color
-        p
-            font-weight: 500
-            font-size: 2.5rem
-            line-height: 11rem
-            color: $grey5-color
-    .advantage
-        margin-bottom: 3rem
-    .row:nth-child(2)
-        display: flex
-        justify-content: space-between
-        .screen
-            box-shadow: 0px 4rem 7rem rgba(56, 34, 34, 0.1)
-            border-radius: 15px
-            width: 110rem
-            margin-right: 10rem
+    position: relative
+    &.full-section
+        padding: 0
+        .big-slider
+            height: 100%
+            .slide
+                padding: 12.7rem 32.3rem 18rem
+                .col
+                    position: relative
+                .row:first-child
+                    margin-bottom: 22.6rem
+                    h3
+                        color: $cherry-color
+                        font-weight: bold
+                        font-size: 1.8rem
+                        text-align: center
+                        margin: 0
+                    h2
+                        color: $black-color 
+                        font-weight: bold
+                        font-size: 5.5rem
+                        text-align: center
+                        margin: 0
+                .row:nth-child(2)
+                    display: flex
+                    justify-content: space-between
+                    h3
+                        font-size: 5rem
+                        line-height: 6rem
+                        color: $dark-color
+                        text-align: left
+                        span
+                            color: $cherry-color
+                    p
+                        font-weight: 500
+                        font-size: 3.5rem
+                        line-height: 11rem
+                        color: $grey5-color
+                    .advantage
+                        margin-bottom: 3rem
+                    .screen
+                        width: 100%
+                &:nth-child(odd)
+                    .row:nth-child(2)
+                        .col:first-child
+                            width: 45%
+                        .col:nth-child(2)
+                            width: 55%
+                            padding-bottom: 10rem
+                            .screen
+                                border-radius: 15px
+                                width: 98%
+                                margin: 0 auto
+                            .union
+                                background-image: url('../img/icons/union.svg')
+                                background-size: cover
+                                display: block
+                                position:
+                                height: 16.4rem
+                                width: 16.4rem
+                                position: absolute
+                                z-index: -1
+                                &.left
+                                    bottom: 0px
+                                    left: 4rem
+                                &.right
+                                    right: -6rem
+                                    bottom: 63rem
+                &:nth-child(even)
+                    .row:nth-child(2)
+                        .col:first-child
+                            width: 45%
+                            p
+                                line-height: 4.5rem
+                            .button
+                                margin-right: 3.5rem
+                        .col:nth-child(2)
+                            .screen
+                                position: relative
+                                top: -13.4rem
+                &:nth-child(1)
+                    .screen 
+                        box-shadow: 0px 4rem 7rem rgba(56, 34, 34, 0.1) 
+        .slide-nav
+            width: calc(100% - 64.6rem)
+            bottom: 14rem
+            left: 50%
+            position: absolute
+            .wrapper
+                position: relative
+                left: -50%
+            .slide-arrows
+                position: absolute
+                bottom: 0
+                left: 0
+                a
+                    display: inline-block
+                    &:first-child
+                        margin-right: 8.4rem
+                    object
+                        height: 32px
+                        pointer-events: none
+            .slide-dots
+                position: absolute
+                bottom: 0
+                left: 50%
+                display: inline-block
+                padding: 0
+                list-style: none
+                text-align: center
+                ul
+                    position: relative
+                    left: -50%
+                    li 
+                        position: relative
+                        display: inline-block
+                        width: 1rem
+                        height: 1rem
+                        margin: 0 2rem
+                        padding: 0
+                        cursor: pointer
+                        button 
+                            font-size: 0
+                            line-height: 0
+                            display: block
+                            width: 1rem
+                            height: 1rem
+                            cursor: pointer
+                            color: transparent
+                            border: 0
+                            outline: none
+                            background: transparent
+                            &:before 
+                                position: absolute
+                                top: 0
+                                left: 0
+                                width: 1rem
+                                height: 1rem
+                                content: ''
+                                background: $grey7-color
+                                border-radius: 1rem
+                                -webkit-font-smoothing: antialiased
+                                -moz-osx-font-smoothing: grayscale
+                        &.slick-active button:before 
+                            top: -.25rem
+                            width: 1.5rem
+                            height: 1.5rem
+                            border-radius: 1.5rem
+                            background: $cherry2-color
+                            box-shadow: 0px 4px 20px $cherry2-color
+            .slide-counter
+                position: absolute
+                bottom: 0
+                right: 0
+                .current-slide
+                    &.even
+                        color: $cherry2-color
+                    font-weight: 600
+                    font-size: 5rem
+                    line-height: 6rem
+                    color: $black-color
+                .total-slide
+                    &.even
+                        color: $gray4-color
+                    font-weight: 600
+                    font-size: 3rem
+                    line-height: 3.6rem
+                    color: $gray3-color
+    &.bg-primary
+        .big-slider
+            .slide
+                .row:first-child
+                    h2
+                        color: $white-color 
+                .row:nth-child(2)
+                    h3
+                        color: $white-color 
+                    p
+                        color: $grey6-color
+        .slide-nav
+            .slide-counter
+                .current-slide
+                    color: $cherry2-color
+                .total-slide
+                    color: $gray4-color
