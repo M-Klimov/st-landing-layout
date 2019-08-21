@@ -65,22 +65,31 @@ html(lang="ru")
                 img(src="./img/extension.png", alt="smile").extension
             .row
                 .col
-                    h2 Мы принимаем отзывы более чем <br> c <span>1, 022 954 603</span> сайтов
+                    h2 Мы принимаем отзывы более чем #[br] c #[span#num ] сайтов
                     a(href="#") Установить
                 .col
                     ul
-                        li торговые площадки (конкретные аккаунты, товары <br> и сайты в  целом)
-                        li социальные сети (аккаунты, паблики, группы)
-                        li интернет-магазины (конкретные товары их группы и магазины в целом)
-                        li всевозможные компании и все остальные сайты, все у чего <br> есть ссылка
+                        li.post торговые площадки (конкретные аккаунты, товары <br> и сайты в  целом)
+                        li.post социальные сети (аккаунты, паблики, группы)
+                        li.post интернет-магазины (конкретные товары их группы и магазины в целом)
+                        li.post всевозможные компании и все остальные сайты, все у чего <br> есть ссылка
             .row.slider-logos
-                object(type="image/svg+xml" data="./img/logos/vk.svg")
-                object(type="image/svg+xml" data="./img/logos/facebook.svg")
-                object(type="image/svg+xml" data="./img/logos/youtube.svg")
-                object(type="image/svg+xml" data="./img/logos/amazon.svg")
-                object(type="image/svg+xml" data="./img/logos/prom.svg")
-                object(type="image/svg+xml" data="./img/logos/olx.svg")
-                object(type="image/svg+xml" data="./img/logos/aliexpress.svg")
+                .slide
+                    object(type="image/svg+xml" data="./img/logos/vk.svg")
+                    object(type="image/svg+xml" data="./img/logos/facebook.svg")
+                    object(type="image/svg+xml" data="./img/logos/youtube.svg")
+                    object(type="image/svg+xml" data="./img/logos/amazon.svg")
+                    object(type="image/svg+xml" data="./img/logos/prom.svg")
+                    object(type="image/svg+xml" data="./img/logos/olx.svg")
+                    object(type="image/svg+xml" data="./img/logos/aliexpress.svg")
+                .slide
+                    object(type="image/svg+xml" data="./img/logos/vk.svg")
+                    object(type="image/svg+xml" data="./img/logos/facebook.svg")
+                    object(type="image/svg+xml" data="./img/logos/youtube.svg")
+                    object(type="image/svg+xml" data="./img/logos/amazon.svg")
+                    object(type="image/svg+xml" data="./img/logos/prom.svg")
+                    object(type="image/svg+xml" data="./img/logos/olx.svg")
+                    object(type="image/svg+xml" data="./img/logos/aliexpress.svg")
         section.section3.full-section
             .big-slider
                 .slide
@@ -193,18 +202,73 @@ html(lang="ru")
                             a(href="#").button.button-watch Смотреть видео
                         .col
                             img.screen(src="./img/artificial-Intelligence.svg", alt="artificial-Intelligence")
+            .slide-skip
+                .chevron
+                .chevron
+                .chevron
+                span.text Прокрутить вниз
             .slide-nav
-                .wrapper
-                    .slide-arrows
-                    .slide-dots
-                    .slide-counter
+                .slide-arrows
+                .slide-dots
+                .slide-counter
 
         section.section4.full-section
-
-        
-        
+            .row
+                .col
+                    img.screen(src="./img/cheater.svg", alt="cheater")
+                .col
+                    h3 Блокируем мошенников
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p В случае большого количества жалоб со стороны пользователей, принимаем участие в блокировке сайта.
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p Обращаемся к хостинг провайдеру для блокировки сайта и регистратору домена для блокировки доменного имени.
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p В случае невозможности блокировки сайта или доменного имени - обращаемся в поисковые системы, такие как Google, Yandex, Bing, Yahoo и др. для исключения сайта из поисковой выдачи.
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p При попадании пользователя на сайт выводим popup сообщение с предупреждением о возможном мошенничестве.
+                    a(href="#").button.button-primary Установить
+                    a(href="#").button.button-watch Смотреть видео
+        section.section4.full-section
+            .row
+                .col
+                    h3 Блокируем мошенников
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p В случае большого количества жалоб со стороны пользователей, принимаем участие в блокировке сайта.
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p Обращаемся к хостинг провайдеру для блокировки сайта и регистратору домена для блокировки доменного имени.
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p В случае невозможности блокировки сайта или доменного имени - обращаемся в поисковые системы, такие как Google, Yandex, Bing, Yahoo и др. для исключения сайта из поисковой выдачи.
+                    .checked
+                        img(src="./img/icons/checkbox.svg")
+                        p При попадании пользователя на сайт выводим popup сообщение с предупреждением о возможном мошенничестве.
+                    a(href="#").button.button-primary Установить
+                    a(href="#").button.button-watch Смотреть видео
+                .col
+                    img.screen(src="./img/openness.svg", alt="openness")
         section.section5.full-section
+            .row
+                h2 Есть вопросы или предложения?
+                h3 Напишите нам, мы будем рады!
+                form#callback(action="#")
+                    input#name(type="text" name="name" placeholder="Имя" minlength="3" required)
+                    input#emailtel(type="text" name="emailtel" placeholder="Почта или телефон" required)
+                    textarea#message(type="text" name="message" rows="5" placeholder="Сообщение")
+                    input.button.button-primary(type="submit" value="Отправить")
+                .info Правовое соглашение 
+                    img.screen(src="./img/icons/mail.svg", alt="mail") 
+                    span max@klomov.co
+                    div Copyright 2019 Все права защищены
 
         script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
-        script(src="./js/main.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js") 
         script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="https://raw.githubusercontent.com/agragregra/start_html/master/_clean_html/libs/waypoints/waypoints.min.js")
+        script(src="./js/main.min.js")
+        

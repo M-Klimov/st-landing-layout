@@ -1,24 +1,45 @@
-.section3
+.section4
+    position: relative
     .col
+        width: 49%
+        display: inline-block
+        .screen
+            width: 100%
         h3
-            font-size: 3.5rem
-            line-height: 5.2rem
+            font-size: 5.5rem
+            line-height: 6rem
             color: $dark-color
             text-align: left
-            span
-                color: $cherry-color
-        p
-            font-weight: 500
-            font-size: 2.5rem
-            line-height: 11rem
-            color: $grey5-color
-    .advantage
-        margin-bottom: 3rem
-    .row:nth-child(2)
-        display: flex
-        justify-content: space-between
-        .screen
-            box-shadow: 0px 4rem 7rem rgba(56, 34, 34, 0.1)
-            border-radius: 15px
-            width: 110rem
-            margin-right: 10rem
+        .button
+            margin-right: 3.5rem
+
+@media(max-width: 2048px)
+    .section4
+        .col
+            h3
+                line-height: 5rem
+@media(max-width: 1980px)
+    .section4
+        .col
+            h3
+                line-height: 3rem
+@media(max-width: 1680px)
+    .section4
+        .col
+            h3
+                font-size: 4rem
+                line-height: 2rem
+@media(max-width: 1440px)
+    .section4
+        .col
+            h3
+                font-size: 3rem
+                line-height: 2rem
+                margin-top: 0
+@media(max-width: 1280px)
+    .section4
+        .col
+            h3
+                font-size: 3rem
+                line-height: 2rem
+                margin-bottom: 1.8rem

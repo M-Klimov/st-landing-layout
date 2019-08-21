@@ -19,12 +19,19 @@
         margin-bottom: 13.4rem
     .row:last-child
         padding: 0 31rem
-        object.slick-slide
-            padding: 0 9rem
-            min-height: 7rem
-            max-height: 10rem
-            &:hover, &:focus
-                filter: brightness(0) invert(1)
+        .slide
+            display: flex
+            justify-content: space-between
+        .slick-slide
+            object
+                height: 7rem
+                //padding: 0 9rem
+                box-sizing: border-box
+                &:hover, &:focus
+                    filter: brightness(0) invert(1)
+            margin-left: 27px
+        .slick-list
+            margin-left: -27px
     .col
         h2
             color: $white-color
