@@ -26,19 +26,21 @@ $box-shadow: 0px 10px 50px rgba($orange-color, 0.5)
         &:before //for icon play
             content: ''
             display: inline-block
-            background-size: cover
+            background-size: auto 100%
             position: absolute
             background-image: url('../img/icons/play.svg')
-            height: 3.5rem
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            height: 50%
             width: 3.6rem
-            margin: -.2rem 0 0 -5.5rem
+            top: 25%
+            left: 13%
+            margin-right: .5rem
         &:hover
             background: $linear-gradient
             box-shadow: $box-shadow
             color: $white-color
             border-color: transparent
-            border: 0px
-            margin: 2px
             &:before
                 background-image: url('../img/icons/play-white.svg')
         &.active
@@ -77,3 +79,12 @@ $box-shadow: 0px 10px 50px rgba($orange-color, 0.5)
                 color: $white-color
                 background-color: transparentize($white-color, .5)
                 border: 2px solid transparent
+
+@media(max-width: 1980px)
+    .button
+        font-size: 1.8rem
+        line-height: 2.2rem
+        &-primary
+            padding: 1.2rem 3.5rem
+        &-watch
+            padding: 1.2rem 3.5rem 1.2rem 7.1rem

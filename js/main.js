@@ -33,20 +33,6 @@ $(() => {
         draggable: true,
     });
 
-    // animate block
-    $('.post').addClass("hidden").viewportChecker({
-        classToAdd: 'visible animated fadeIn',
-        offset: 100
-    });
-
-    // road to 1000000000
-    $('#num .visible').animate({ num: 1022954603 - 7 /* - начало */ }, {
-        duration: 5000,
-        step: function(num) {
-            this.innerHTML = (num + 7).toLocaleString()
-        }
-    });
-
     bigSlider.slick({
         infinite: false,
         vertical: true,
@@ -70,7 +56,7 @@ $(() => {
         }
         status.html("<span class='current-slide'>" + ('00' + i).slice(-2) + "</span><span class='total-slide'>/" + ('00' + slick.slideCount).slice(-2) + "</span>");
     });
-
+/*
     // slick fullpage slide
     sliderWrapper.on('wheel', (function(event) {
         event.preventDefault();
@@ -92,6 +78,7 @@ $(() => {
     }));
 
     // go to slider if visible 30%
+
     $(window).on('wheel', function() {
         var scrollTop = $(this).scrollTop(),
             scrollBot = scrollTop + $(this).height(),
@@ -99,11 +86,12 @@ $(() => {
             elBottom = elTop + sliderWrapper.outerHeight(),
             visibleTop = elTop < scrollTop ? scrollTop : elTop,
             visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+        event.preventDefault();
         if ((visibleBottom - visibleTop) >= (sliderWrapper.outerHeight() * .25) && (visibleBottom - visibleTop) <= (sliderWrapper.outerHeight() * .5)) {
             body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
         }
-    });
-
+    });    
+*/
     // skip slide
     $('.chevron').on('click', function() {
         body.animate({ scrollTop: sliderWrapper.next().offset().top }, bigSliderSpeed);
@@ -141,4 +129,33 @@ $(() => {
         }
     });
 
+    // animate block
+    $(".lazyIn").animated("fadeIn");
+    $(".slide").animated("fadeIn");
+    $(".lazyRight").animated("fadeRigh");
+    $(".lazyDown").animated("fadeDown");
+    $(".lazyLeft").animated("fadeLeft");
+    // road to 1000000000
+    $('#num').animate({ num: 1022954603 - 7 /* - начало */ }, {
+        duration: 5000,
+        step: function(num) {
+            this.innerHTML = (num + 7).toLocaleString()
+        }
+    });
 });
+
+(function($) {
+	$.fn.animated = function(inEffect) {
+		$(this).each(function() {
+			var ths = $(this);
+			ths.css("opacity", "0").addClass("animated").waypoint(function(dir) {
+				if (dir === "down") {
+					ths.addClass(inEffect).css("opacity", "1");
+				};
+			}, {
+				offset: "90%"
+			});
+
+		});
+	};
+})(jQuery);

@@ -1,0 +1,124 @@
+header
+    background: linear-gradient(111.34deg, $black-color -10.47%, $darkcherry-color 96.06%)
+    color: $white-color
+    .menu
+        margin-left: 2rem
+        height: 1.8rem
+        width: 0.4rem
+        background: url('../img/icons/menu.svg')
+        cursor: pointer
+        display: inline-block
+        &-list
+            display: none
+            &.active
+                display: flex
+                flex-direction: column
+                position: fixed
+                top: 5.5rem
+                right: 1rem
+                background-color: transparentize($black-color,.2)
+                padding: 1rem 1.3rem
+                li
+                    list-style: none
+                    cursor: pointer
+                    margin-top: .5rem
+    .header
+        &-top
+            padding: 3rem 2rem 1.7rem 3rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            border-bottom: 1px solid $cherry2-color
+            min-height: 3.5rem
+            .url
+                font-size: 1.6rem
+                margin-right: auto
+            .face
+                border-radius: 50%
+                height: 35px
+                width: 35px
+            .button
+                border: 1px solid transparent
+                &:hover
+                    box-shadow: none
+                    background-color: transparent
+                    color: $primary-color
+                    border: 1px solid $primary-color
+                &-secondary
+                    background: rgba(255, 118, 99, 0.3)
+                    &:hover
+                        background-color: $primary-color
+            .button, .button-secondary
+                margin-right: 2rem
+                font-size: 1.4rem
+                padding: .8rem 2.1rem .8rem 2.1rem
+                border-radius: .5rem
+        &-bottom
+            padding: 1.9rem 1.6rem 2rem 2rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .toggle
+                &:first-child
+                    margin-right: 1rem
+                &:nth-child(2)
+                    margin-right: auto
+            .like
+                margin-right: .9rem
+                &:before
+                    content: ''
+                    display: inline-block
+                    height: 1.636rem
+                    width: 1.8rem
+                    margin: 0 .95rem -0.2rem 0
+                    background: url('../img/icons/like.svg') no-repeat top right
+            .dislike
+                margin-right: .9rem
+                &:before
+                    content: ''
+                    display: inline-block
+                    height: 1.636rem
+                    width: 1.8rem
+                    margin: 0 .95rem -0.4rem 0
+                    background: url('../img/icons/like.svg') no-repeat top right
+                    transform: rotate(180deg)
+            .star
+                &:before
+                    content: ''
+                    display: inline-block
+                    height: 1.712rem
+                    width: 1.8rem
+                    margin: 0 .95rem -0.2rem 0
+                    background: url('../img/icons/star.svg') no-repeat top right
+        &-mini
+            text-align: center
+            font-size: 2.5rem
+            padding: 2.1rem 0 2.1rem 0
+            .back
+                display: block
+                position: fixed
+                left: 2.9rem
+                top: 2.55rem
+                height: 1.9rem
+                width: 1.083rem
+                background: url('../img/icons/back.svg') no-repeat top right
+                &:hover
+                    cursor: pointer
+            .review-auth-title
+                font-size: 2rem
+            .url
+                color: $primary-color
+                background-color: $darkcherry2-color
+                font-weight: 600
+                font-size: 1.6rem
+                padding: .49rem 1rem
+                border-radius: 4px
+            &-no-auth
+                padding: 2.111rem 2.5rem 2.111rem 7rem
+                display: flex
+                justify-content: space-between
+                align-items: center
+            .menu
+                position: fixed
+                right: 2.7rem
+                top: 2.7rem
