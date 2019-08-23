@@ -1,0 +1,45 @@
+@import 'vendors/normalize'
+@import 'colors'
+@import 'fonts'
+@import 'animation'
+@import 'modules/header'
+@import 'modules/footer'
+@import 'components/toggle'
+@import 'components/comment'
+@import 'components/button'
+@import 'components/tabs'
+@import 'components/input'
+@import 'components/checkbox'
+
+html
+    font-size: 10px
+
+body
+    background-color: $white-color
+    color: $dark-color
+    font-family: 'Inter'
+    font-size: 1.4rem
+    overflow-y: hidden
+
+a
+    text-decoration: none
+    color: $white-color
+
+.content
+    height: calc(100vh - 152px - 90px)
+    overflow-y: scroll
+    &-mini
+        height: calc(100vh - 70px - 90px - 5.4rem)
+        overflow-y: scroll
+        padding: 3rem 2.5rem 2.9rem 2.5rem
+
+.comments
+    padding: 2.2rem 4.2rem 0 2.5rem
+    .comment
+        margin-bottom: 2.5rem
+
+#show-more
+    font-size: 1.2rem
+    padding: 1rem 0
+    max-width: 35.3rem
+    margin: 0 auto 2.1rem auto

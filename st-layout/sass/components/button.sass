@@ -1,0 +1,40 @@
+@mixin button
+    border-radius: 10px
+    cursor: pointer
+    transition: .5s
+    display: block
+    font-style: normal
+    font-weight: 600
+    font-size: 1.8rem
+    padding: 1.65rem 0
+    text-align: center
+
+@mixin button-fill
+    background-color: $primary-color
+    color: $white-color
+
+@mixin button-empty
+    background-color: transparent
+    color: $primary-color
+    border: 1px solid $primary-color
+
+.button
+    @include button
+    @include button-fill
+    &.active
+        @include button-empty
+    &:hover
+        @include button-fill
+        box-shadow: 0px 1rem 5rem rgba(255, 118, 99, 0.5)
+    &-outline
+        @include button
+        @include button-empty
+        &.active
+            @include button-fill
+        &:hover
+            @include button-fill
+            box-shadow: 0px 1rem 5rem rgba(255, 118, 99, 0.5)
+        &-file
+            padding: 1rem 2rem
+    &-secondary
+        @include button
