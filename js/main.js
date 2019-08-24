@@ -56,7 +56,7 @@ $(() => {
         }
         status.html("<span class='current-slide'>" + ('00' + i).slice(-2) + "</span><span class='total-slide'>/" + ('00' + slick.slideCount).slice(-2) + "</span>");
     });
-/*
+
     // slick fullpage slide
     sliderWrapper.on('wheel', (function(event) {
         event.preventDefault();
@@ -91,7 +91,7 @@ $(() => {
             body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
         }
     });    
-*/
+
     // skip slide
     $('.chevron').on('click', function() {
         body.animate({ scrollTop: sliderWrapper.next().offset().top }, bigSliderSpeed);
