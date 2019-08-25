@@ -100,7 +100,7 @@ html(lang="ru")
                         h3 УДОБНО
                         h2 О расширении
                     .row
-                        .col(slide-animation="fadeInLeft")
+                        .col(animation="fadeInLeft")
                             h3 #[span Удобно.] #[br] Не нужно ничего искать 
                             p Отзывы прямо в расширении браузера.
                             .advantage(animation="fadeInUp")
@@ -111,7 +111,7 @@ html(lang="ru")
                                 .box
                                     img(src="./img/icons/page.svg")
                                 span Отзывы о любой странице
-                        .col(slide-animation="fadeInRight")
+                        .col(animation="fadeInRight")
                             img.screen(src="./img/screen.png", alt="screen")
                             span.union.left
                             span.union.right
@@ -618,11 +618,11 @@ html(lang="ru")
                         .col(slide-animation="fadeInLeft")
                             h3 #[span Таких] #[br] продуктов больше нет на рынке. 
                             p Отзывы прямо в расширении браузера.
-                            .advantage(animation="fadeInUp")
+                            .advantage(slide-animation="fadeInUp")
                                 .box
                                     img(src="./img/icons/sitemap.svg")
                                 span Отзывы о любом сайте
-                            .advantage(animation="fadeInUp")
+                            .advantage(slide-animation="fadeInUp")
                                 .box
                                     img(src="./img/icons/page.svg")
                                 span Отзывы о любой странице
@@ -762,6 +762,5 @@ html(lang="ru")
         script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js") 
         script(src="./libs/slick/slick.min.js")
-        script(src="./js/lazyload.js")
-        script(src="./js/main.js")
+        script(src="./js/main.min.js")
         

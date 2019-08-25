@@ -30,6 +30,7 @@ $(document).ready(function() {
         }
     });
 
+
     // малый слайдер - настройка
     logoSlider.slick({
         infinite: true,
@@ -55,7 +56,6 @@ $(document).ready(function() {
         nextArrow: '<a href=""><object type="image/svg+xml" data="./img/icons/arrow-right.svg">></object></a>',
         useTransform: true,
     });
-
     // большой слайдер - счетчик
     bigSlider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
@@ -67,7 +67,7 @@ $(document).ready(function() {
         status.html("<span class='current-slide'>" + ('00' + i).slice(-2) + "</span><span class='total-slide'>/" + ('00' + slick.slideCount).slice(-2) + "</span>");
 
         $(slick.$slides.get(currentSlide)).find("[slide-animation]").each(function() {
-            animate = $(this).attr('slide-animation');
+            var animate = $(this).attr('slide-animation');
             if (!$(this).hasClass(animate)) {
                 $(this).addClass(animate).removeClass('hidden');
             }
@@ -114,7 +114,7 @@ $(document).ready(function() {
             scrollBot = scrollTop + $(this).height();
 
         counter.each(function() {
-            oTop = $(this).offset().top;
+            var oTop = $(this).offset().top;
             if (flagCounter && scrollBot >= oTop) {
                 var $this = $(this),
                     countTo = $this.attr('data-count');

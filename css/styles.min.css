@@ -308,6 +308,27 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes changeBg {
+  0% {
+    background: #FFFFFF; }
+  40% {
+    opacity: 0; }
+  100% {
+    background: -webkit-linear-gradient(171.76deg, #582639 0%, #140E1D 101.08%);
+    background: linear-gradient(278.24deg, #582639 0%, #140E1D 101.08%);
+    opacity: 1; } }
+
+@keyframes changeBg {
+  0% {
+    background: #FFFFFF; }
+  40% {
+    opacity: 0; }
+  100% {
+    background: -webkit-linear-gradient(171.76deg, #582639 0%, #140E1D 101.08%);
+    background: -o-linear-gradient(171.76deg, #582639 0%, #140E1D 101.08%);
+    background: linear-gradient(278.24deg, #582639 0%, #140E1D 101.08%);
+    opacity: 1; } }
+
 @-webkit-keyframes float {
   0% {
     -webkit-transform: translatey(-25px);
@@ -357,8 +378,8 @@ template {
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0); }
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -367,8 +388,8 @@ template {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0); }
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -1539,9 +1560,8 @@ a {
   outline: none; }
 
 .bg-primary {
-  background: -webkit-linear-gradient(171.76deg, #582639 0%, #140E1D 101.08%);
-  background: -o-linear-gradient(171.76deg, #582639 0%, #140E1D 101.08%);
-  background: linear-gradient(278.24deg, #582639 0%, #140E1D 101.08%); }
+  -webkit-animation: changeBg .25s ease-in-out forwards;
+  animation: changeBg .25s ease-in-out forwards; }
 
 .full-section {
   height: 100vh;
