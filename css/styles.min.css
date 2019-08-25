@@ -812,8 +812,7 @@ template {
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
   transform: scale3d(0.5, 0.5, 0.5);
   -webkit-animation: move 3s ease-out infinite;
-  animation: move 3s ease-out infinite;
-  cursor: pointer; }
+  animation: move 3s ease-out infinite; }
   .chevron:first-child {
     -webkit-animation: move 3s ease-out 1s infinite;
     animation: move 3s ease-out 1s infinite; }
@@ -858,7 +857,8 @@ template {
   height: 10rem;
   width: 12rem;
   left: -6rem;
-  top: 0; }
+  top: 0;
+  cursor: pointer; }
 
 .bg-primary .text {
   color: #FFFFFF; }
@@ -1222,13 +1222,17 @@ template {
             left: 0;
             -webkit-animation: float 6s ease-in-out infinite;
             animation: float 6s ease-in-out infinite; }
-        .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:first-child p {
+          .section3.full-section .big-slider .slide:nth-child(2) .col:nth-child(2) .screen .fill, .section3.full-section .big-slider .slide:nth-child(2) .col:nth-child(2) .levitate .fill {
+            fill: #FF7663; }
+            .section3.full-section .big-slider .slide:nth-child(2) .col:nth-child(2) .screen .fill:nth-child(3), .section3.full-section .big-slider .slide:nth-child(2) .col:nth-child(2) .levitate .fill:nth-child(3) {
+              fill: #ff735f; }
+        .section3.full-section .big-slider .slide:nth-child(5) .row:nth-child(2) .col:first-child p, .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:first-child p {
           line-height: 4.5rem; }
-        .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:first-child .button {
+        .section3.full-section .big-slider .slide:nth-child(5) .row:nth-child(2) .col:first-child .button, .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:first-child .button {
           margin-right: 3.5rem; }
-        .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:nth-child(2) {
+        .section3.full-section .big-slider .slide:nth-child(5) .row:nth-child(2) .col:nth-child(2), .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:nth-child(2) {
           height: 62.2rem; }
-          .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:nth-child(2) .screen, .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .slide:nth-child(2) .col:nth-child(2) .levitate, .section3.full-section .big-slider .slide:nth-child(2) .slide:nth-child(7) .row:nth-child(2) .col:nth-child(2) .levitate {
+          .section3.full-section .big-slider .slide:nth-child(5) .row:nth-child(2) .col:nth-child(2) .screen, .section3.full-section .big-slider .slide:nth-child(5) .row:nth-child(2) .slide:nth-child(2) .col:nth-child(2) .levitate, .section3.full-section .big-slider .slide:nth-child(2) .slide:nth-child(5) .row:nth-child(2) .col:nth-child(2) .levitate, .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .col:nth-child(2) .screen, .section3.full-section .big-slider .slide:nth-child(7) .row:nth-child(2) .slide:nth-child(2) .col:nth-child(2) .levitate, .section3.full-section .big-slider .slide:nth-child(2) .slide:nth-child(7) .row:nth-child(2) .col:nth-child(2) .levitate {
             height: 100%; }
         .section3.full-section .big-slider .slide:nth-child(8) .col:nth-child(2) {
           height: 71.8rem; }
