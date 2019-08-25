@@ -1,12 +1,23 @@
 @keyframes float
 	0% 
-		transform: translatey(0px)
+		transform: translatey(-25px)
 	50% 
-		transform: translatey(-20px)
+		transform: translatey(-45px)
 	100% 
-		transform: translatey(0px)
+		transform: translatey(-25px)
 
 @keyframes fadeInDown
+    from
+        opacity: 0
+        transform: translate3d(0, 100%, 0)
+    to
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+
+.fadeInDown
+    animation: fadeInDown 1.5s forwards
+
+@keyframes fadeInUp
     from
         opacity: 0
         transform: translate3d(0, -100%, 0)
@@ -14,8 +25,8 @@
         opacity: 1
         transform: translate3d(0, 0, 0)
 
-.fadeInDown
-    animation-name: fadeInDown
+.fadeInUp
+    animation: fadeInUp 1.5s forwards
 
 @keyframes fadeInLeft
     from
@@ -28,7 +39,7 @@
 
 
 .fadeInLeft
-    animation-name: fadeInLeft
+    animation: fadeInLeft 1.5s forwards
 
 @keyframes fadeInRight
     from
@@ -40,7 +51,7 @@
         transform: translate3d(0, 0, 0)
 
 .fadeInRight
-     animation-name: fadeInRight
+     animation: fadeInRight 1.5s forwards
 
 @keyframes fadeIn
     from
@@ -49,4 +60,4 @@
         opacity: 1
 
 .fadeIn
-    animation-name: fadeIn
+    animation: fadeIn 1.5s forwards

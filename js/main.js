@@ -1,14 +1,23 @@
-$(() => {
+$(document).ready(function() {
     const body = $([document.documentElement, document.body]),
         search = $('.search'),
         searchInput = $('.search input'),
         searchList = $('.search-list'),
+        counter = $('.counter-value'),
         logoSlider = $('.slider-logos'),
         sliderWrapper = $('.section3'),
         bigSlider = $('.big-slider'),
         status = $('.slide-counter'),
-        bigSliderSpeed = '500';
+        bigSliderSpeed = '500'; // скорость прокрутки слайдера
 
+    var flagChangeSlide = true,
+        flagCounter = true;
+
+    // скрытие всех блоков с анимацией
+    $("[animation]").addClass('hidden');
+    $("[slide-animation]").addClass('hidden');
+
+    // активация окна с результатами поиска
     searchInput.on('input', () => {
         const length = searchInput.val().split(' ').join('').length;
 
@@ -21,6 +30,7 @@ $(() => {
         }
     });
 
+    // малый слайдер - настройка
     logoSlider.slick({
         infinite: true,
         autoplay: true,
@@ -29,10 +39,10 @@ $(() => {
         dots: false,
         prevArrow: false,
         nextArrow: false,
-        //variableWidth: true,
         draggable: true,
     });
 
+    // большой слайдер - настройка
     bigSlider.slick({
         infinite: false,
         vertical: true,
@@ -46,7 +56,7 @@ $(() => {
         useTransform: true,
     });
 
-    // slick slide counter
+    // большой слайдер - счетчик
     bigSlider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         if (i % 2 == 0) {
@@ -55,11 +65,19 @@ $(() => {
             sliderWrapper.removeClass('bg-primary');
         }
         status.html("<span class='current-slide'>" + ('00' + i).slice(-2) + "</span><span class='total-slide'>/" + ('00' + slick.slideCount).slice(-2) + "</span>");
+
+        $(slick.$slides.get(currentSlide)).find("[slide-animation]").each(function() {
+            animate = $(this).attr('slide-animation');
+            if (!$(this).hasClass(animate)) {
+                $(this).addClass(animate).removeClass('hidden');
+            }
+        });
     });
 
-    // slick fullpage slide
+    // большой слайдер - поэкранная прокрутка
     sliderWrapper.on('wheel', (function(event) {
         event.preventDefault();
+        if (!flagChangeSlide) return;
         if (event.originalEvent.deltaY > 0) {
             if ((bigSlider.slick('slickCurrentSlide') + 1) < bigSlider.slick('getSlick').slideCount) {
                 bigSlider.slick('slickNext');
@@ -75,9 +93,9 @@ $(() => {
                 body.animate({ scrollTop: (sliderWrapper.offset().top - $(window).height()) }, bigSliderSpeed);
             }
         }
+        flagChangeSlide = false;
+        setTimeout(function() { flagChangeSlide = true }, 500);
     }));
-
-    // go to slider if visible 30%
 
     $(window).on('wheel', function() {
         var scrollTop = $(this).scrollTop(),
@@ -86,18 +104,56 @@ $(() => {
             elBottom = elTop + sliderWrapper.outerHeight(),
             visibleTop = elTop < scrollTop ? scrollTop : elTop,
             visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
-        event.preventDefault();
         if ((visibleBottom - visibleTop) >= (sliderWrapper.outerHeight() * .25) && (visibleBottom - visibleTop) <= (sliderWrapper.outerHeight() * .5)) {
             body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
         }
-    });    
+    });
 
-    // skip slide
-    $('.chevron').on('click', function() {
+    $(window).on('scroll', function() {
+        var scrollTop = $(this).scrollTop(),
+            scrollBot = scrollTop + $(this).height();
+
+        counter.each(function() {
+            oTop = $(this).offset().top;
+            if (flagCounter && scrollBot >= oTop) {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum.toLocaleString());
+                        //alert('finished');
+                    }
+                });
+                flagCounter = false;
+            }
+        });
+
+        // анимирование блоков
+        $("[animation]").each(function() {
+            var $this = $(this),
+                oTop = $this.offset().top,
+                animate = $this.attr('animation');
+            if (scrollBot >= oTop && !$this.hasClass(animate)) {
+                $this.addClass(animate).removeClass('hidden');
+            }
+        });
+    });
+
+    // большой слайдер - кнопка пропуска секции
+    $('.area').on('click', function() {
         body.animate({ scrollTop: sliderWrapper.next().offset().top }, bigSliderSpeed);
     });
 
-    // form validator
+    // валидатор формы
     $("#callback").validate({
         rules: {
             name: {
@@ -128,34 +184,4 @@ $(() => {
             return false; // for demo
         }
     });
-
-    // animate block
-    $(".lazyIn").animated("fadeIn");
-    $(".slide").animated("fadeIn");
-    $(".lazyRight").animated("fadeRigh");
-    $(".lazyDown").animated("fadeDown");
-    $(".lazyLeft").animated("fadeLeft");
-    // road to 1000000000
-    $('#num').animate({ num: 1022954603 - 7 /* - начало */ }, {
-        duration: 5000,
-        step: function(num) {
-            this.innerHTML = (num + 7).toLocaleString()
-        }
-    });
 });
-
-(function($) {
-	$.fn.animated = function(inEffect) {
-		$(this).each(function() {
-			var ths = $(this);
-			ths.css("opacity", "0").addClass("animated").waypoint(function(dir) {
-				if (dir === "down") {
-					ths.addClass(inEffect).css("opacity", "1");
-				};
-			}, {
-				offset: "90%"
-			});
-
-		});
-	};
-})(jQuery);
