@@ -12,7 +12,6 @@
     opacity: 0
     transform: scale3d(0.5, 0.5, 0.5)
     animation: move 3s ease-out infinite
-    cursor: pointer
     &:first-child 
         animation: move 3s ease-out 1s infinite
     &:nth-child(2) 
@@ -45,6 +44,14 @@
     white-space: nowrap
     opacity: .25
     animation: pulse 2s linear alternate infinite
+
+.area 
+    position: absolute
+    height: 10rem
+    width: 12rem
+    left: -6rem
+    top: 0
+    cursor: pointer
 
 .bg-primary
     .text 
