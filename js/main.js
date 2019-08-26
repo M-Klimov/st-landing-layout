@@ -1,7 +1,7 @@
 $(document).ready(function() {
     const body = $([document.documentElement, document.body]),
         search = $('.search'),
-        searchInput = $('.search input'),
+        searchInput = search.find('input'),
         searchList = $('.search-list'),
         counter = $('.counter-value'),
         logoSlider = $('.slider-logos'),
@@ -52,10 +52,11 @@ $(document).ready(function() {
         speed: bigSliderSpeed,
         appendDots: $('.slide-dots'),
         appendArrows: $('.slide-arrows'),
-        prevArrow: '<a href=""><object type="image/svg+xml" data="./img/icons/arrow-left.svg"><</object></a>',
-        nextArrow: '<a href=""><object type="image/svg+xml" data="./img/icons/arrow-right.svg">></object></a>',
+        prevArrow: '<a href=""><img src="./img/icons/arrow-left.svg"></a>',
+        nextArrow: '<a href=""><img src="./img/icons/arrow-right.svg"></a>',
         useTransform: true,
     });
+
     // большой слайдер - счетчик
     bigSlider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
@@ -97,6 +98,7 @@ $(document).ready(function() {
         setTimeout(function() { flagChangeSlide = true }, 500);
     }));
 
+    // большой слайдер - автодоводка при достижении 30% видимости
     $(window).on('wheel', function() {
         var scrollTop = $(this).scrollTop(),
             scrollBot = scrollTop + $(this).height(),
@@ -104,7 +106,8 @@ $(document).ready(function() {
             elBottom = elTop + sliderWrapper.outerHeight(),
             visibleTop = elTop < scrollTop ? scrollTop : elTop,
             visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
-        if ((visibleBottom - visibleTop) >= (sliderWrapper.outerHeight() * .25) && (visibleBottom - visibleTop) <= (sliderWrapper.outerHeight() * .5)) {
+        if ((visibleBottom - visibleTop) >= (sliderWrapper.outerHeight() * .25) &&
+            (visibleBottom - visibleTop) <= (sliderWrapper.outerHeight() * .5)) {
             body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
         }
     });
@@ -113,6 +116,7 @@ $(document).ready(function() {
         var scrollTop = $(this).scrollTop(),
             scrollBot = scrollTop + $(this).height();
 
+        // счетчик сайтов
         counter.each(function() {
             var oTop = $(this).offset().top;
             if (flagCounter && scrollBot >= oTop) {
