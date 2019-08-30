@@ -1,5 +1,13 @@
+$(window).on('load', function() {
+    var $preloader = $('#preloader'),
+        $loader = $preloader.find('.loader');
+    $loader.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+    setTimeout(function() { $("html, body").css("overflow", "visible") }, 1500);
+});
+
 $(document).ready(function() {
-    const body = $([document.documentElement, document.body]),
+    const body = $("html, body"),
         search = $('.search'),
         searchInput = search.find('input'),
         searchList = $('.search-list'),
@@ -35,12 +43,11 @@ $(document).ready(function() {
     logoSlider.slick({
         infinite: true,
         autoplay: true,
-        slidesToShow: 1,
+        speed: bigSliderSpeed,
+        slidesToShow: 5,
         slidesToScroll: 1,
         dots: false,
-        prevArrow: false,
-        nextArrow: false,
-        draggable: true,
+        arrows: false,
     });
 
     // большой слайдер - настройка
