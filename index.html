@@ -7,6 +7,7 @@
     <title>siteTruth</title>
     <link href="./css/styles.min.css" rel="stylesheet">
     <link href="./libs/slick/slick.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/edd5a79e0c.js"></script>
   </head>
   <body>
     <div id="preloader">
@@ -34,7 +35,7 @@
           <li><span class="num">05</span><span class="title">apple.com</span><span class="like">1 237</span><span class="dislike">765</span><span class="star">98/100</span></li>
         </ul>
         <h2>Возможность комментировать все </h2>
-        <h3>что есть в интернете </h3><a class="button button-primary" href="#">Установить</a><a class="button button-watch" href="#">Смотреть видео</a><span class="union left"></span><span class="union right"></span>
+        <h3>что есть в интернете </h3><a class="button button-primary" href="#" name="download">Установить</a><a class="button button-watch" href="#modalSection1" name="modal">Смотреть видео</a><span class="union left"></span><span class="union right"></span>
       </div>
       <div class="col">
         <ul class="lang">
@@ -46,10 +47,9 @@
     </section>
     <section class="section2 bg-primary">
       <div class="row extension-slider" animation="fadeInUp">
-        <div class="slide">
-          <iframe class="extension" src="./st-layout/index.html"></iframe><img class="smile" src="./img/icons/smile.svg" alt="smile">
-          <iframe class="extension" src="./st-layout/index.html"></iframe>
-        </div>
+        <div class="slide"><img class="extension" src="./img/extension.png" alt="extension"><img class="smile" src="./img/icons/smile.svg" alt="smile"><img class="extension" src="./img/extension.png" alt="extension"></div>
+        <div class="slide"><img class="extension" src="./img/extension.png" alt="extension"><img class="smile" src="./img/icons/smile2.svg" alt="smile"><img class="extension" src="./img/extension.png" alt="extension"></div>
+        <div class="slide"><img class="extension" src="./img/extension.png" alt="extension"><img class="smile" src="./img/icons/smile3.svg" alt="smile"><img class="extension" src="./img/extension.png" alt="extension"></div>
       </div>
       <div class="row">
         <div class="col" animation="fadeInLeft">
@@ -66,11 +66,11 @@
       </div>
       <div class="row slider-logos" animation="fadeIn"><img src="./img/logos/vk.svg" alt="vk"><img src="./img/logos/facebook.svg" alt="facebook"><img src="./img/logos/youtube.svg" alt="youtube"><img src="./img/logos/amazon.svg" alt="amazon"><img src="./img/logos/prom.svg" alt="prom"><img src="./img/logos/olx.svg" alt="olx"><img src="./img/logos/aliexpress.svg" alt="aliexpress"></div>
     </section>
-    <section class="section3 full-section">
+    <section class="section3 full-section bg-primary">
       <div class="big-slider">
         <div class="slide">
           <div class="row">
-            <h3>УДОБНО</h3>
+            <h3>УДОБНО </h3>
             <h2>О расширении</h2>
           </div>
           <div class="row">
@@ -793,10 +793,53 @@
           <div>Copyright 2019 Все права защищены</div>
         </div>
       </div>
-    </section>
+    </section><a id="up-button"></a>
+        <div class="modalWrapper" id="modalSection1">
+          <div class="modalWindow fadeInUp">
+            <h2>Контроль отзывов - это легко</h2><a class="close" href="#"></a>
+            <div class="content">
+              <iframe width="100%" height="260px" src="https://www.youtube.com/embed/krSaN_y69rM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="modalWrapper" id="success">
+          <div class="modalWindow fadeInUp">
+            <h2>Успех!</h2><a class="close" href="#"></a>
+            <div class="content">
+              <p>Браузер определен как поддерживаемый, идет переадресация...</p>
+            </div>
+          </div>
+        </div>
+        <div class="modalWrapper" id="error">
+          <div class="modalWindow fadeInUp">
+            <h2>Ошибка совместимости</h2><a class="close" href="#"></a>
+            <div class="content">
+              <p>К сожалению, данное расширение не поддерживает работу на мобильных устройствах. </p>
+            </div>
+          </div>
+        </div>
+    <div class="modalWrapper" id="error2">
+      <div class="modalPop">
+        <div class="row">
+          <div class="smile"><img src="./img/icons/smile3-light.svg" alt="smile"></div>
+          <div class="your-browser"><img src="./img/icons/tor.png" alt="tor"></div>
+        </div>
+        <div class="row">
+          <h2>Извините, мы не поддерживаем "<span class="browserName"></span>"</h2>
+          <p>Вы можете установить наше расширение в следующих браузерах</p>
+        </div>
+        <div class="row">
+          <div class="browser"><img src="./img/icons/chrome.svg" alt="Chrome"><span>Google Chrome</span></div>
+          <div class="browser"><img src="./img/icons/safari.svg" alt="Safari"><span>Safari</span></div>
+          <div class="browser"><img src="./img/icons/firefox.svg" alt="Firefox"><span>Mozilla</span></div>
+          <div class="browser"><img src="./img/icons/opera.svg" alt="Opera"><span>Opera</span></div>
+        </div><a class="close fas fa-times" href="#"></a>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
+    <script src="./js/detect.min.js"></script>
     <script src="./libs/slick/slick.min.js"></script>
-    <script src="./js/main.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

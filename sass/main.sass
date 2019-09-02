@@ -9,6 +9,8 @@
 @import 'components/section-controllers'
 @import 'components/slide-skip'
 @import 'components/preloader'
+@import 'components/up-btn'
+@import 'components/modal'
 
 @import 'sections/section1'
 @import 'sections/section2'
@@ -22,18 +24,16 @@ html
 
 body
     overflow: hidden
-    
-*
-    transition: .3s
 
-a
+a, button
     text-decoration: none
+    transition: .3s
 
 *:focus
     outline: none
 
 .bg-primary
-    animation: changeBg .25s ease-in-out forwards
+    background: $linear-gradient2
 
 .full-section
     height: 100vh

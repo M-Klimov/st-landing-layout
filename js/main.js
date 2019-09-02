@@ -16,7 +16,9 @@ $(document).ready(function() {
         sliderWrapper = $('.section3'),
         bigSlider = $('.big-slider'),
         status = $('.slide-counter'),
-        bigSliderSpeed = '500'; // скорость прокрутки слайдера
+        bigSliderSpeed = '500', // скорость прокрутки слайдера
+        upBtn = $('#up-button'),
+        extSlider = $('.extension-slider');
 
     var flagChangeSlide = true,
         flagCounter = true;
@@ -38,6 +40,18 @@ $(document).ready(function() {
         }
     });
 
+    // малый слайдер - настройка
+    extSlider.slick({
+        infinite: true,
+        autoplay: true,
+        speed: bigSliderSpeed,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        dots: false,
+        arrows: false,
+        useTransform: true
+    });
 
     // малый слайдер - настройка
     logoSlider.slick({
@@ -46,8 +60,10 @@ $(document).ready(function() {
         speed: bigSliderSpeed,
         slidesToShow: 5,
         slidesToScroll: 1,
+        swipeToSlide: true,
         dots: false,
         arrows: false,
+        useTransform: true
     });
 
     // большой слайдер - настройка
@@ -67,11 +83,11 @@ $(document).ready(function() {
     // большой слайдер - счетчик
     bigSlider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
-        if (i % 2 == 0) {
-            sliderWrapper.addClass('bg-primary');
-        } else {
-            sliderWrapper.removeClass('bg-primary');
-        }
+        /*  if (i % 2 == 0) {
+             sliderWrapper.addClass('bg-primary');
+         } else {
+             sliderWrapper.removeClass('bg-primary');
+         } */
         status.html("<span class='current-slide'>" + ('00' + i).slice(-2) + "</span><span class='total-slide'>/" + ('00' + slick.slideCount).slice(-2) + "</span>");
 
         $(slick.$slides.get(currentSlide)).find("[slide-animation]").each(function() {
@@ -123,6 +139,12 @@ $(document).ready(function() {
         var scrollTop = $(this).scrollTop(),
             scrollBot = scrollTop + $(this).height();
 
+        // проверка текущей прокрутки экрана для отображения кнопки "вверх"
+        if ($(window).scrollTop() > 300) {
+            upBtn.addClass('show');
+        } else {
+            upBtn.removeClass('show');
+        }
         // счетчик сайтов
         counter.each(function() {
             var oTop = $(this).offset().top;
@@ -159,6 +181,12 @@ $(document).ready(function() {
         });
     });
 
+    // кнопка "вверх"
+    upBtn.on('click', function(e) {
+        e.preventDefault();
+        body.animate({ scrollTop: 0 }, '300');
+    });
+
     // большой слайдер - кнопка пропуска секции
     $('.area').on('click', function() {
         body.animate({ scrollTop: sliderWrapper.next().offset().top }, bigSliderSpeed);
@@ -193,6 +221,40 @@ $(document).ready(function() {
             $('#callback').show("slow");
             //form.submit();
             return false; // for demo
+        }
+    });
+
+    //выбираем все теги с именем  modal
+    $('a[name=modal]').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).fadeIn(500);
+    });
+    //если нажата кнопка закрытия окна
+    $('.modalWrapper .close').click(function(e) {
+        e.preventDefault();
+        $('.modalWrapper').fadeOut(500);
+    });
+    $('.modalWrapper').on('click', function(e) {
+        if (e.target !== this)
+            return;
+        $('.modalWrapper').fadeOut(500);
+    });
+
+    // определение браузера
+    $('a[name=download]').click(function(e) {
+        e.preventDefault();
+        var user = detect.parse(navigator.userAgent),
+            browsers = ["Firefox", "Safari", "Chrome", "Opera"];
+        if (user.device.type == "Desktop") {
+            if (browsers.includes(user.browser.family)) {
+                console.log("Зашли с десктопа и правильного браузера");
+            } else {
+                $(".browserName").text(user.browser.name)
+                $("#error2").fadeIn(500);
+            }
+        } else {
+            $("#error").fadeIn(500);
         }
     });
 });

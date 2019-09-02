@@ -7,6 +7,7 @@ html(lang="ru")
         title siteTruth
         link(href="./css/styles.min.css", rel="stylesheet")
         link(href="./libs/slick/slick.css", rel="stylesheet")
+        script(src="https://kit.fontawesome.com/edd5a79e0c.js")
     body
         #preloader
             .loader
@@ -66,8 +67,8 @@ html(lang="ru")
                 
                 h2 Возможность комментировать все 
                 h3 что есть в интернете 
-                a(href="#").button.button-primary Установить
-                a(href="#").button.button-watch Смотреть видео
+                a(href="#" name='download').button.button-primary Установить
+                a(href='#modalSection1', name='modal').button.button-watch Смотреть видео
                 span.union.left
                 span.union.right
             .col
@@ -79,11 +80,20 @@ html(lang="ru")
         section.section2.bg-primary
             .row.extension-slider(animation="fadeInUp")
                 .slide
-                    iframe(src="./st-layout/index.html").extension
-                    //- img(src="./img/extension.png", alt="smile").extension
+                    //- iframe(src="./st-layout/index.html").extension
+                    img(src="./img/extension.png", alt="extension").extension
                     img(src="./img/icons/smile.svg", alt="smile").smile
-                    iframe(src="./st-layout/index.html").extension
-                    //- img(src="./img/extension.png", alt="smile").extension
+                    img(src="./img/extension.png", alt="extension").extension
+                .slide
+                    //- iframe(src="./st-layout/index.html").extension
+                    img(src="./img/extension.png", alt="extension").extension
+                    img(src="./img/icons/smile2.svg", alt="smile").smile
+                    img(src="./img/extension.png", alt="extension").extension
+                .slide
+                    //- iframe(src="./st-layout/index.html").extension
+                    img(src="./img/extension.png", alt="extension").extension
+                    img(src="./img/icons/smile3.svg", alt="smile").smile
+                    img(src="./img/extension.png", alt="extension").extension
             .row
                 .col(animation="fadeInLeft")
                     h2 Мы принимаем отзывы более чем c #[span.counter-value(animation="fadeIn" data-count="1022954603") ] сайтов
@@ -102,11 +112,11 @@ html(lang="ru")
                 img(src="./img/logos/prom.svg", alt="prom")
                 img(src="./img/logos/olx.svg", alt="olx")
                 img(src="./img/logos/aliexpress.svg", alt="aliexpress")
-        section.section3.full-section
+        section.section3.full-section.bg-primary
             .big-slider
                 .slide
                     .row
-                        h3 УДОБНО
+                        h3 УДОБНО 
                         h2 О расширении
                     .row
                         .col(animation="fadeInLeft")
@@ -768,8 +778,55 @@ html(lang="ru")
                     span max@klomov.co
                     div Copyright 2019 Все права защищены
 
+        a#up-button
+
+        mixin modal(title, id)
+            .modalWrapper(id= id)
+                .modalWindow.fadeInUp
+                    h2= title
+                    a.close(href='#')
+                    .content
+                        if block
+                            block
+                        else
+                            p Содержимое отсутствует
+
+        +modal("Контроль отзывов - это легко", "modalSection1")
+            iframe(width="100%" height="260px" src="https://www.youtube.com/embed/krSaN_y69rM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        
+        +modal("Успех!", "success")
+            p Браузер определен как поддерживаемый, идет переадресация...
+        +modal("Ошибка совместимости", "error")
+            p К сожалению, данное расширение не поддерживает работу на мобильных устройствах. 
+        
+        .modalWrapper(id="error2")
+            .modalPop
+                .row
+                    .smile
+                        img(src="./img/icons/smile3-light.svg" alt="smile")
+                    .your-browser
+                        img(src="./img/icons/tor.png" alt="tor")
+                .row
+                    h2 Извините, мы не поддерживаем "#[span.browserName]"
+                    p Вы можете установить наше расширение в следующих браузерах
+                .row
+                    .browser
+                        img(src="./img/icons/chrome.svg" alt="Chrome")
+                        span Google Chrome
+                    .browser
+                        img(src="./img/icons/safari.svg" alt="Safari")
+                        span Safari
+                    .browser
+                        img(src="./img/icons/firefox.svg" alt="Firefox")
+                        span Mozilla
+                    .browser
+                        img(src="./img/icons/opera.svg" alt="Opera")
+                        span Opera
+                a.close.fas.fa-times(href='#')
+       
         script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js") 
+        script(src="./js/detect.min.js")
         script(src="./libs/slick/slick.min.js")
-        script(src="./js/main.min.js")
+        script(src="./js/main.js")
         
