@@ -16,7 +16,7 @@ $(document).ready(function() {
         sliderWrapper = $('.section3'),
         bigSlider = $('.big-slider'),
         status = $('.slide-counter'),
-        bigSliderSpeed = '500', // скорость прокрутки слайдера
+        sliderSpeed = '500', // скорость прокрутки слайдера
         upBtn = $('#up-button'),
         extSlider = $('.extension-slider');
 
@@ -44,7 +44,7 @@ $(document).ready(function() {
     extSlider.slick({
         infinite: true,
         autoplay: true,
-        speed: bigSliderSpeed,
+        speed: sliderSpeed,
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
@@ -57,7 +57,7 @@ $(document).ready(function() {
     logoSlider.slick({
         infinite: true,
         autoplay: true,
-        speed: bigSliderSpeed,
+        speed: sliderSpeed,
         slidesToShow: 5,
         slidesToScroll: 1,
         swipeToSlide: true,
@@ -72,7 +72,7 @@ $(document).ready(function() {
         vertical: true,
         dots: true,
         arrows: true,
-        speed: bigSliderSpeed,
+        speed: sliderSpeed,
         appendDots: $('.slide-dots'),
         appendArrows: $('.slide-arrows'),
         prevArrow: '<a href=""><img src="./img/icons/arrow-left.svg"></a>',
@@ -105,16 +105,16 @@ $(document).ready(function() {
         if (event.originalEvent.deltaY > 0) {
             if ((bigSlider.slick('slickCurrentSlide') + 1) < bigSlider.slick('getSlick').slideCount) {
                 bigSlider.slick('slickNext');
-                body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
+                body.animate({ scrollTop: sliderWrapper.offset().top }, sliderSpeed);
             } else {
-                body.animate({ scrollTop: sliderWrapper.next().offset().top }, bigSliderSpeed);
+                body.animate({ scrollTop: sliderWrapper.next().offset().top }, sliderSpeed);
             }
         } else {
             if (bigSlider.slick('slickCurrentSlide') > 0) {
                 bigSlider.slick('slickPrev');
-                body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
+                body.animate({ scrollTop: sliderWrapper.offset().top }, sliderSpeed);
             } else {
-                body.animate({ scrollTop: (sliderWrapper.offset().top - $(window).height()) }, bigSliderSpeed);
+                body.animate({ scrollTop: (sliderWrapper.offset().top - $(window).height()) }, sliderSpeed);
             }
         }
         flagChangeSlide = false;
@@ -131,7 +131,7 @@ $(document).ready(function() {
             visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
         if ((visibleBottom - visibleTop) >= (sliderWrapper.outerHeight() * .25) &&
             (visibleBottom - visibleTop) <= (sliderWrapper.outerHeight() * .5)) {
-            body.animate({ scrollTop: sliderWrapper.offset().top }, bigSliderSpeed);
+            body.animate({ scrollTop: sliderWrapper.offset().top }, sliderSpeed);
         }
     });
 
@@ -189,7 +189,7 @@ $(document).ready(function() {
 
     // большой слайдер - кнопка пропуска секции
     $('.area').on('click', function() {
-        body.animate({ scrollTop: sliderWrapper.next().offset().top }, bigSliderSpeed);
+        body.animate({ scrollTop: sliderWrapper.next().offset().top }, sliderSpeed);
     });
 
     // валидатор формы
@@ -233,11 +233,13 @@ $(document).ready(function() {
     //если нажата кнопка закрытия окна
     $('.modalWrapper .close').click(function(e) {
         e.preventDefault();
+        $(".content iframe").attr("src", $(".content iframe").attr("src"));
         $('.modalWrapper').fadeOut(500);
     });
     $('.modalWrapper').on('click', function(e) {
         if (e.target !== this)
             return;
+        $(".content iframe").attr("src", $(".content iframe").attr("src"));
         $('.modalWrapper').fadeOut(500);
     });
 
@@ -248,13 +250,14 @@ $(document).ready(function() {
             browsers = ["Firefox", "Safari", "Chrome", "Opera"];
         if (user.device.type == "Desktop") {
             if (browsers.includes(user.browser.family)) {
-                console.log("Зашли с десктопа и правильного браузера");
+                var href = $(this).attr('href');
+                window.open(href, '_blank').focus();
             } else {
-                $(".browserName").text(user.browser.name)
-                $("#error2").fadeIn(500);
+                $(".browserName").text(user.browser.family)
+                $("#incorrectBrowser").fadeIn(500);
             }
         } else {
-            $("#error").fadeIn(500);
+            $("#incorrectDevice").fadeIn(500);
         }
     });
 });
