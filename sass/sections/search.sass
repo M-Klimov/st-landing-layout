@@ -1,0 +1,684 @@
+
+*
+    box-sizing: border-box
+input[type=submit], input[type=button]
+    cursor: pointer
+.top-display
+    padding: 62px 131px 271px
+    max-height: 1434px
+    background: linear-gradient(278.24deg, #582639 0%, #140E1D 101.08%)
+    &-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .star
+            display: flex
+        .search
+            input
+                border: 2px solid #FF7663
+                border-radius: 15px
+                background: transparent
+                color: #fff
+            &-list
+                max-width: 74rem
+                width: 100%
+        .butn-auth
+            display: flex
+            align-items: center    
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                font-weight: bold
+                font-size: 25px
+            &-sign
+                width: 144px
+                height: 60px
+                border: 2px solid #FFFFFF
+                border-radius: 10px
+                color: #fff
+                margin-right: 89px
+            &-reg
+                background: #FFFFFF
+                width: 226px
+                height: 60px
+                border-radius: 10px
+                color: #FF7663
+                margin-right: 33px
+            .lang
+                font-weight: 600
+                font-size: 25px
+                color: #fff
+                display: flex
+                list-style: none
+                li
+                    cursor: pointer
+                    &:not(:last-child)
+                        margin-right: 29px
+                & .active
+                    color: #ff7663
+    &-center
+        #add_otziv
+            cursor: pointer
+        margin-top: 235px
+        margin-bottom: 121px
+        h1, h2
+            margin: 0
+        h2
+            font-weight: bold
+            font-size: 55px
+            color: #FFFFFF
+        h1 
+            font-weight: bold
+            font-size: 75px
+            color: #ff7663
+            margin-top: 28px
+            margin-bottom: 68px
+        input
+            width: 287px
+            height: 78px
+            background: linear-gradient(123.16deg, #FF7F4C 24.05%, #F94666 83.39%)
+            border-radius: 15px
+            border: none
+            font-weight: bold
+            color: #fff
+            font-size: 25px
+    &-bottom
+        position: relative
+        .search-list_2
+            overflow-y: scroll
+            display: block
+            position: relative
+            max-width: 950px
+            background: #2E1D25
+            border-radius: 15px
+            max-height: 341px
+            // height: 260px
+            color: #fff
+            padding: 36px
+            border: none
+            li:not(:last-child)
+                margin-bottom: 35px
+            .num
+                color: #C2C2C2
+            .mCSB_inside > .mCSB_container
+                margin-right: 0
+            .mCSB_scrollTools
+                overflow: hidden
+                opacity: 1
+                right: -65px
+                border-radius: 5px
+            .mCS-dark.mCSB_scrollTools .mCSB_draggerRail
+                background: #633853
+                width: 4px
+                height: 325px
+            .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+                width: 12px
+                height: 50px 
+                background: #FD6E54
+                box-shadow: 0px 4px 11px rgba(253, 110, 84, 0.46)
+                border-radius: 10px
+            .mCSB_dragger
+                height: 50px !important
+        object
+            position: absolute
+            top: -175px
+            right: 0
+        .search-doc
+            top: -400px
+            right: 275px
+.comments
+    box-sizing: border-box
+    padding: 124px 131px 150px
+    display: flex
+    &-sort
+        display: flex
+        font-weight: 600
+        font-size: 20px
+        div
+            cursor: pointer
+            color: #B0B0B0
+            &:not(:last-child)
+                margin-right: 50px
+            &.active
+                position: relative
+                color: #44353B
+                &:after
+                    position: absolute
+                    content: ''
+                    width: 100%
+                    height: 2px
+                    bottom: -5px
+                    left: 0
+                    background-color: #FF7663
+    &-sort-2
+        display: flex
+        align-items: center
+        margin-left: 146px
+        font-weight: 600
+        font-size: 20px
+        object
+            margin-right: 20px
+        div
+            color: #B0B0B0
+            cursor: pointer
+            &:not(:last-child)
+                margin-right: 50px
+            &.active
+                position: relative
+                color: #44353B
+.comment-blocks
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 0 131px 40px
+    .butn 
+        display: none
+    .comment
+        padding: 37px 58px 42px 32px
+        width: calc(49% + 10px)
+        display: flex
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07)
+        border-radius: 10px
+        margin-bottom: 30px
+        &:not(:nth-child(2n))
+            // margin-right: 30px
+        &-img
+            min-width: 110px
+            max-height: 110px
+            border-radius: 100%
+            overflow: hidden
+            img
+                width: 110%
+                object-fit: cover
+        &-text
+            justify-content: space-between
+            margin-left: 23px
+            display: flex
+            flex-direction: column
+            &-name
+                font-weight: 600
+                font-size: 35px
+                line-height: 42px
+                color: #FF7663
+                padding-bottom: 8px
+            p
+                font-style: normal
+                font-weight: normal
+                font-size: 22px
+                line-height: 35px
+                color: #000000
+                padding: 0
+                margin: 0
+                padding-bottom: 36px
+            &-bottom
+                display: flex
+                align-items: center
+                .like, .dislike
+                    display: flex
+                    align-items: center
+                    font-size: 16px
+                    object
+                        width: 30px
+                        height: 27px
+                        margin-right: 7px
+                .like
+                    margin-right: 10px
+                .dislike
+                    margin-right: 15px
+                .userlike
+                    margin-right: 30px
+                &__span
+                    display: flex
+                    align-items: center
+                    a
+                        font-weight: 600
+                        font-size: 16px
+                        color: #B0B0B0
+                    span
+                        font-size: 16px
+                        margin-left: 5px
+                    .dot
+                        width: 6.3px
+                        height: 6.3px
+                        border-radius: 100%
+                        background-color: #B0B0B0
+                        margin: 0 15px
+                        align-self: flex-end
+                        margin-bottom: 3px
+                    
+                .data
+                    display: flex
+                    align-items: center
+                    margin-left: 30px
+                    color: #B0B0B0
+                    object
+                        width: 30px
+                        height: 30px
+                        margin-right: 19px
+                .answer
+                    font-size: 16px
+                    font-weight: 600
+                    color: #B0B0B0
+                    margin-left: 14px
+.section5
+    padding: 0
+    padding-bottom: 64px
+    justify-content: center
+    width: 100%
+    &.full-section
+        height: unset
+    .row
+        height: unset
+    h2 
+        margin-bottom: 25px
+    h3 
+        margin-top: 0
+    .row form
+        margin-bottom: 42px
+    .row form input, .row form textarea
+        padding: 0 3rem
+        &::placeholder
+            color: #000000
+    textarea 
+        margin-bottom: 40px !important
+    .info
+        font-weight: bold
+.modal_sign
+    
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 501px
+    height: 588px
+    background: #FFFFFF
+    box-shadow: 20px 30px 70px rgba(27, 17, 32, 0.2)
+    border-radius: 20px
+    z-index: 102
+    padding: 33px 25px 27px
+    .exit
+        cursor: pointer
+        transform: rotate(45deg)
+        position: absolute
+        right: 20px
+        top: 18px
+        font-size: 48px
+        font-weight: 200
+    .choose
+        div
+            cursor: pointer
+
+    h2 
+        font-weight: bold
+        margin-top: 0
+        font-size: 25px
+        color: #3E1C2F
+        margin-bottom: 50px
+    span
+        font-weight: 600
+        font-size: 16px
+        color: #FF7663
+        margin-bottom: 20px
+        display: block
+    form
+        margin-bottom: 15px
+        input, a, textarea
+            width: 100%
+            height: 55px
+            border: 1px solid #DDDDDD
+            border-radius: 10px
+            font-weight: 600
+            font-size: 16px
+            padding: 0 25px
+            &:focus
+                border-color: #FF7663
+            &:not(:last-child)
+                margin-bottom: 30px
+        div
+            display: flex
+            justify-content: space-between
+        .sign_submit
+            width: 38%
+            height: 55px
+            background: #FF7663
+            font-size: 18px
+            color: #fff
+            border: none
+        a
+            display: inline-block
+            width: 58%
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 2px solid #FF7663
+            border-radius: 10px
+            color: #FF7663
+            font-size: 18px
+            padding: 0
+    .reset
+        margin-bottom: 34px
+        a
+            font-weight: 600
+            font-size: 16px
+            color: #000
+            
+            color: #000
+    .sign-social
+        &-text
+            font-weight: 600
+            font-size: 16px
+            color: #000
+            margin-bottom: 17px
+        div
+            width: 100%
+            display: flex
+            justify-content: space-between
+        a
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            font-size: 18px
+            color: #FFFFFF
+            width: 48%
+            height: 55px
+            border-radius: 10px
+            background: #6385FF
+            &:first-child
+                
+            &:last-child
+                background: #F4726F
+.modal_reg
+    h2
+        margin-bottom: 20px
+    .choose
+        margin-bottom: 32px
+        display: flex
+        div
+            font-size: 16px
+            font-weight: 600
+            color: #B0B0B0
+            position: relative
+            &:not(:last-child)
+                margin-right: 37px
+            &.active
+                position: relative
+                color: #1D1121
+                &:after
+                    position: absolute
+                    content: ''
+                    width: 100%
+                    height: 2px
+                    bottom: -10px
+                    left: 0
+                    background-color: #FF7663
+
+    form
+        input
+            height: 50px
+            &:not(:last-child)
+            margin-bottom: 10px !important
+        input[type=checkbox]
+
+            padding: 0
+            -webkit-user-select: none
+            -moz-user-select: none
+            -ms-user-select: none
+            user-select: none
+            width: 15px
+            height: 15px
+            border: 1px solid #DDDDDD
+            background-color: #fff
+            border-radius: 3px
+            margin-right: 6px
+        label
+            font-weight: 600
+            font-size: 12px
+            line-height: 18px
+            color: #8B8B8B
+        div
+            margin-top: 22px
+            display: flex
+            justify-content: flex-start
+            margin-bottom: 20px
+           
+        input[type=submit]
+            background: #FF7663
+            border-radius: 10px
+            color: #fff
+.modal_otziv
+    h2
+        margin-bottom: 25px
+    form
+        textarea
+            resize: none;
+            padding: 20px
+            height: 323px !important
+@media (max-width: 2560px)
+    .top-display
+        padding-left: 62px
+        padding-right: 62px 
+        padding-bottom: 177px
+        &-header
+            .butn-auth
+                a
+                    font-size: 18px
+                &-sign
+                    width: 113px
+                    height: 47px
+                    margin-right: 19px
+                &-reg
+                    width: 177px
+                    height: 47px
+                    margin-right: 0
+                .lang
+                    li
+                        font-size: 18px
+        &-center
+            margin-top: 149px
+            h2
+                font-size: 30px    
+            h1
+                font-size: 45px   
+            input
+                width: 212px
+                height: 55px     
+                font-size: 18px
+        &-bottom
+            .search-list_2
+                width: 816px
+                height: 292px
+                li:not(:last-child)
+                    margin-bottom: 24px
+            object
+                top: -164px
+                right: -100px
+            .search-bg
+                width: 964px
+                height: 597px
+            .search-doc
+                width: 94px
+                height: 94px
+                top: -309px
+                right: 172px
+    .comments
+        padding: 72px 62px 55px
+        div
+            font-size: 18px
+    .comment-blocks
+        padding: 0px 62px 55px
+        .butn
+            display: flex
+            width: 100%
+            justify-content: center
+            margin-top: 40px
+            a
+                width: 238px
+                height: 55px
+                left: 0px
+                top: 0px
+                background: linear-gradient(127.54deg, #FF7F4C 24.05%, #F94666 83.39%)
+                border-radius: 15px
+                display: flex
+                align-items: center
+                justify-content: center
+                font-weight: bold;
+                font-size: 18px
+                text-align: center
+                color: #FFFFFF
+        .comment
+            margin-bottom: 20px
+            &-img
+                min-width: 82px
+                max-height: 82px
+                border-radius: 100%
+            &-text
+                div
+                    font-size: 12px
+                    a
+                        font-size: 12px
+                &-name
+                    font-size: 25px !important
+                p
+                    font-size: 18px
+                    line-height: 27px
+                &-bottom 
+                    div
+                        font-size: 12px !important
+                    span
+                        font-size: 12px
+                    .userlike
+                        width: 23px
+                        height: 18px
+                    .data
+                        
+                        object
+                            width: 18px
+                            height: 18px
+                    .answer
+                        font-size: 12px
+                    .dot
+                        width: 5px
+                        height: 5px
+                &-bottom .like object, &-bottom .dislike object
+                    width: 18px
+                    height: 16px
+    
+@media (max-width: 1920px)
+    html
+        font-size: 7.3px
+    .top-display
+        overflow: hidden
+        padding-left: 135px
+        padding-right: 135px 
+        padding-bottom: 125px
+        &-header
+            .search
+                height: 39px
+            .butn-auth
+                a
+                    font-size: 14px
+                &-sign
+                    width: 91px
+                    height: 39px
+                    margin-right: 19px
+                &-reg
+                    width: 131px
+                    height: 39px
+                    margin-right: 0
+                .lang
+                    padding-left: 28px
+                    li
+                        font-size: 14px
+                        
+        &-center
+            margin-top: 137px
+            h2
+                font-size: 20px    
+            h1
+                font-size: 35px   
+            input
+                display: none
+        &-bottom
+            .mCSB_1_scrollbar
+                visibility:  hidden !important
+            .search-list_2
+                overflow-y: scroll
+                width: 627px
+                height: 244px
+                li:not(:last-child)
+                    margin-bottom: 22px
+            object
+                top: -164px
+                right: -150px
+            .search-bg
+                width: 683px
+                height: 597px
+            .search-doc
+                width: 80px
+                height: 80px
+                top: -206px
+                right: 152px
+    .comments
+        padding: 89px 135px 65px
+        div
+            font-size: 16px
+    .comment-blocks
+        padding: 0px 135px 55px
+        .butn
+            display: none
+
+        .comment
+            width: calc(49% + 2px)
+            height: 190px
+            position: relative
+            margin-bottom: 20px
+            padding: 22px 33px 22px 15px
+            &-img
+                min-width: 55px
+                max-height: 55px
+                border-radius: 100%
+                
+            &-text
+                div
+                    font-size: 10px
+                    a
+                        font-size: 10px
+                &-name
+                    font-size: 16px !important
+                    padding-bottom: 0
+                    line-height: 1
+                p
+                    font-size: 14px
+                    line-height: 21px
+                    padding-bottom: 0
+                &-bottom 
+                    div
+                        font-size: 10px !important
+                    span
+                        font-size: 10px
+                    .userlike
+                        width: 23px
+                        height: 18px
+                        margin-right: 15px
+                    .data
+                        position: absolute
+                        top: 30px
+                        right: 21px
+                        object
+                            width: 18px
+                            height: 18px
+                            margin-right: 8px
+                    .answer
+                        font-size: 10px
+
+                    .dot
+                        width: 5px
+                        height: 5px
+                        margin: 0 5px
+                        align-self: center
+                &-bottom .like object, &-bottom .dislike object
+                    width: 16px
+                    height: 14px
+                    

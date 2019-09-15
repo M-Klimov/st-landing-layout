@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>siteTruth</title>
+    <link href="./css/styles.min.css" rel="stylesheet">
+    <link href="./libs/slick/slick.css" rel="stylesheet">
+    <link rel="stylesheet" href="sass/sections/search.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <script src="https://kit.fontawesome.com/edd5a79e0c.js"></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="loader">
+        <div class="l_main">
+          <div class="l_square"><span></span><span></span><span></span></div>
+          <div class="l_square"><span></span><span></span><span></span></div>
+          <div class="l_square"><span></span><span></span><span></span></div>
+          <div class="l_square"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="top-display">
+        <div class="top-display-header">
+            <div class="search">
+                <form>
+                  <input placeholder="Начните вводить название сайта">
+                </form>
+                <ul class="search-list">
+                    <li><span class="num">01</span><span class="title">apple.com</span><span class="like">9 827</span><span class="dislike">1 634</span><span class="star">98/100</span></li>
+                    <li><span class="num">02</span><span class="title">amazone.com</span><span class="like">325</span><span class="dislike">74</span><span class="star">98/100</span></li>
+                    <li><span class="num">03</span><span class="title">amazone.comamazone.com</span><span class="like">831</span><span class="dislike">1 634</span><span class="star">98/100</span></li>
+                    <li><span class="num">04</span><span class="title">vk.com</span><span class="like">9 827</span><span class="dislike">58</span><span class="star">98/100</span></li>
+                    <li><span class="num">05</span><span class="title">apple.com</span><span class="like">1 237</span><span class="dislike">765</span><span class="star">98/100</span></li>
+                </ul>
+            </div>
+            <div class="butn-auth">
+                <a href="#" class="butn-auth-sign">Вход</a>
+                <a href="#" class="butn-auth-reg">Регистрация</a>
+                <ul class="lang">
+                    <li class="active">RU</li>
+                    <li>EN</li>
+                    <li>UA </li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-display-center">
+            <h2>Отзывы о странице</h2>
+            <h1>http://promo-sa.ru/seo-terms/URL-adress</h1>
+            <form action="">
+                <input type="button" value="Добавить отзыв" id="add_otziv">
+            </form>
+        </div>
+        <div class="top-display-bottom">
+            <ul class="search-list search-list_2 mCustomScrollbar" data-mcs-theme="dark">
+                <li><span class="num">01</span><span class="title">apple.com</span><span class="like">9 827</span><span class="dislike">1 634</span><span class="star">98/100</span></li>
+                <li><span class="num">02</span><span class="title">amazone.com</span><span class="like">325</span><span class="dislike">74</span><span class="star">98/100</span></li>
+                <li><span class="num">03</span><span class="title">amazone.comamazone.com</span><span class="like">831</span><span class="dislike">1 634</span><span class="star">98/100</span></li>
+                <li><span class="num">04</span><span class="title">vk.com</span><span class="like">9 827</span><span class="dislike">58</span><span class="star">98/100</span></li>
+                <li><span class="num">05</span><span class="title">apple.com</span><span class="like">1 237</span><span class="dislike">765</span><span class="star">98/100</span></li>
+                <li><span class="num">01</span><span class="title">apple.com</span><span class="like">9 827</span><span class="dislike">1 634</span><span class="star">98/100</span></li>
+                <li><span class="num">02</span><span class="title">amazone.com</span><span class="like">325</span><span class="dislike">74</span><span class="star">98/100</span></li>
+                <li><span class="num">03</span><span class="title">amazone.comamazone.com</span><span class="like">831</span><span class="dislike">1 634</span><span class="star">98/100</span></li>
+                <li><span class="num">04</span><span class="title">vk.com</span><span class="like">9 827</span><span class="dislike">58</span><span class="star">98/100</span></li>
+                <li><span class="num">05</span><span class="title">apple.com</span><span class="like">1 237</span><span class="dislike">765</span><span class="star">98/100</span></li>
+            </ul>
+            <object data="img/icons/icon-doc.svg" type="image/svg+xml" class="search-doc ">
+            Your browser does not support SVG
+            </object>
+            <object type="image/svg+xml" data="img/background-search.svg" class="search-bg">
+            Your browser does not support SVG
+            </object>
+        </div>
+
+
+    </div>
+    <div class="comments">
+        <div class="comments-sort">
+            <div class="positiv active">Положительные</div> 
+            <div class="negativ">Отрицательные</div>
+            <div class="spam">Спам</div>
+        </div>
+        <div class="comments-sort-2">
+            <object data="img/icons/settings.svg" type="image/svg+xml">
+                Your browser does not support SVG
+            </object>
+            <div class="data active">По дате обновления</div>
+            <div class="rating">По рейтингу</div>
+        </div>
+    </div>
+    <div class="comment-blocks">
+        <div class="comment">
+            <div class="comment-img">
+                <img src="img/comment-img.png" alt="comment-img">
+            </div>
+            <div class="comment-text">
+                <div class="comment-text-name">
+                    Username
+                </div>
+                <p>
+                    На этом месте должен быть самый крутой, креативный, неординарный отзыв о работе крутейшего, современного сервиса по поиску замечательных, любимых домашних питомцев. Все добра и любви! Рекомендую!
+                </p>
+                <div class="comment-text-bottom">
+                    <div class="like">
+                        <object data="img/icons/likes.svg" type="image/svg+xml">
+                            
+                        </object>
+                        14
+                    </div>
+                    <div class="dislike">
+                        <object data="img/icons/dislike.svg" type="image/svg+xml">
+                            
+                        </object>
+                        15
+                    </div>
+                    <object data="img/icons/Userlike.svg" type="image/svg+xml" class="userlike"></object>
+                    <div class="comment-text-bottom__span">
+                        <a href="#">Ответы компании <span>14</span></a>
+                        <div class="dot"></div>
+                        <a href="#">Ответы пользователей <span>15</span></a>
+                    </div>
+                    <div class="data">
+                        <object data="img/icons/calendar.svg" type="image/svg+xml">
+                        </object>
+                        22,03,15
+                        
+                    </div>
+                    <a href="#" class="answer">ответить</a>
+                </div>
+            </div>
+        </div>
+                <div class="comment">
+            <div class="comment-img">
+                <img src="img/comment-img.png" alt="comment-img">
+            </div>
+            <div class="comment-text">
+                <div class="comment-text-name">
+                    Username
+                </div>
+                <p>
+                    На этом месте должен быть самый крутой, креативный, неординарный отзыв о работе крутейшего, современного сервиса по поиску замечательных, любимых домашних питомцев. Все добра и любви! Рекомендую!
+                </p>
+                <div class="comment-text-bottom">
+                    <div class="like">
+                        <object data="img/icons/likes.svg" type="image/svg+xml">
+                            
+                        </object>
+                        14
+                    </div>
+                    <div class="dislike">
+                        <object data="img/icons/dislike.svg" type="image/svg+xml">
+                            
+                        </object>
+                        15
+                    </div>
+                    <object data="img/icons/Userlike.svg" type="image/svg+xml" class="userlike"></object>
+                    <div class="comment-text-bottom__span">
+                        <a href="#">Ответы компании <span>14</span></a>
+                        <div class="dot"></div>
+                        <a href="#">Ответы пользователей <span>15</span></a>
+                    </div>
+                    <div class="data">
+                        <object data="img/icons/calendar.svg" type="image/svg+xml">
+                        </object>
+                        22,03,15
+                        
+                    </div>
+                    <a href="#" class="answer">ответить</a>
+                </div>
+            </div>
+        </div>
+                <div class="comment">
+            <div class="comment-img">
+                <img src="img/comment-img.png" alt="comment-img">
+            </div>
+            <div class="comment-text">
+                <div class="comment-text-name">
+                    Username
+                </div>
+                <p>
+                    На этом месте должен быть самый крутой, креативный, неординарный отзыв о работе крутейшего, современного сервиса по поиску замечательных, любимых домашних питомцев. Все добра и любви! Рекомендую!
+                </p>
+                <div class="comment-text-bottom">
+                    <div class="like">
+                        <object data="img/icons/likes.svg" type="image/svg+xml">
+                            
+                        </object>
+                        14
+                    </div>
+                    <div class="dislike">
+                        <object data="img/icons/dislike.svg" type="image/svg+xml">
+                            
+                        </object>
+                        15
+                    </div>
+                    <object data="img/icons/Userlike.svg" type="image/svg+xml" class="userlike"></object>
+                    <div class="comment-text-bottom__span">
+                        <a href="#">Ответы компании <span>14</span></a>
+                        <div class="dot"></div>
+                        <a href="#">Ответы пользователей <span>15</span></a>
+                    </div>
+                    <div class="data">
+                        <object data="img/icons/calendar.svg" type="image/svg+xml">
+                        </object>
+                        22,03,15
+                        
+                    </div>
+                    <a href="#" class="answer">ответить</a>
+                </div>
+            </div>
+        </div>
+                <div class="comment">
+            <div class="comment-img">
+                <img src="img/comment-img.png" alt="comment-img">
+            </div>
+            <div class="comment-text">
+                <div class="comment-text-name">
+                    Username
+                </div>
+                <p>
+                    На этом месте должен быть самый крутой, креативный, неординарный отзыв о работе крутейшего, современного сервиса по поиску замечательных, любимых домашних питомцев. Все добра и любви! Рекомендую!
+                </p>
+                <div class="comment-text-bottom">
+                    <div class="like">
+                        <object data="img/icons/likes.svg" type="image/svg+xml">
+                            
+                        </object>
+                        14
+                    </div>
+                    <div class="dislike">
+                        <object data="img/icons/dislike.svg" type="image/svg+xml">
+                            
+                        </object>
+                        15
+                    </div>
+                    <object data="img/icons/Userlike.svg" type="image/svg+xml" class="userlike"></object>
+                    <div class="comment-text-bottom__span">
+                        <a href="#">Ответы компании <span>14</span></a>
+                        <div class="dot"></div>
+                        <a href="#">Ответы пользователей <span>15</span></a>
+                    </div>
+                    <div class="data">
+                        <object data="img/icons/calendar.svg" type="image/svg+xml">
+                        </object>
+                        22,03,15
+                        
+                    </div>
+                    <a href="#" class="answer">ответить</a>
+                </div>
+            </div>
+        </div>
+                <div class="comment">
+            <div class="comment-img">
+                <img src="img/comment-img.png" alt="comment-img">
+            </div>
+            <div class="comment-text">
+                <div class="comment-text-name">
+                    Username
+                </div>
+                <p>
+                    На этом месте должен быть самый крутой, креативный, неординарный отзыв о работе крутейшего, современного сервиса по поиску замечательных, любимых домашних питомцев. Все добра и любви! Рекомендую!
+                </p>
+                <div class="comment-text-bottom">
+                    <div class="like">
+                        <object data="img/icons/likes.svg" type="image/svg+xml">
+                            
+                        </object>
+                        14
+                    </div>
+                    <div class="dislike">
+                        <object data="img/icons/dislike.svg" type="image/svg+xml">
+                            
+                        </object>
+                        15
+                    </div>
+                    <object data="img/icons/Userlike.svg" type="image/svg+xml" class="userlike"></object>
+                    <div class="comment-text-bottom__span">
+                        <a href="#">Ответы компании <span>14</span></a>
+                        <div class="dot"></div>
+                        <a href="#">Ответы пользователей <span>15</span></a>
+                    </div>
+                    <div class="data">
+                        <object data="img/icons/calendar.svg" type="image/svg+xml">
+                        </object>
+                        22,03,15
+                        
+                    </div>
+                    <a href="#" class="answer">ответить</a>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment-img">
+                <img src="img/comment-img.png" alt="comment-img">
+            </div>
+            <div class="comment-text">
+                <div class="comment-text-name">
+                    Username
+                </div>
+                <p>
+                    На этом месте должен быть самый крутой, креативный, неординарный отзыв о работе крутейшего, современного сервиса по поиску замечательных, любимых домашних питомцев. Все добра и любви! Рекомендую!
+                </p>
+                <div class="comment-text-bottom">
+                    <div class="like">
+                        <object data="img/icons/likes.svg" type="image/svg+xml">
+                            
+                        </object>
+                        14
+                    </div>
+                    <div class="dislike">
+                        <object data="img/icons/dislike.svg" type="image/svg+xml">
+                            
+                        </object>
+                        15
+                    </div>
+                    <object data="img/icons/Userlike.svg" type="image/svg+xml" class="userlike"></object>
+                    <div class="comment-text-bottom__span">
+                        <a href="#">Ответы компании <span>14</span></a>
+                        <div class="dot"></div>
+                        <a href="#">Ответы пользователей <span>15</span></a>
+                    </div>
+                    <div class="data">
+                        <object data="img/icons/calendar.svg" type="image/svg+xml">
+                        </object>
+                        22,03,15
+                        
+                    </div>
+                    <a href="#" class="answer">ответить</a>
+                </div>
+            </div>
+        </div>
+        <div class="butn">
+            <a href="#">Показать больше</a>
+        </div>
+    </div>
+    <section class="section5 full-section">
+        <div class="row" animation="fadeIn">
+            <h2>Есть вопросы или предложения?</h2>
+            <h3>Напишите нам, мы будем рады!</h3>
+            <form id="callback" action="#">
+            <input id="name" type="text" name="name" placeholder="Имя" minlength="3" required>
+            <input id="emailtel" type="text" name="emailtel" placeholder="Почта или телефон" required>
+            <textarea id="message" type="text" name="message" rows="3" placeholder="Сообщение"></textarea>
+            <input class="button button-primary" type="submit" value="Отправить">
+            </form>
+            <div class="info">Правовое соглашение <img class="screen" src="./img/icons/mail.svg" alt="mail"><span>max@klomov.co</span>
+            <div>Copyright 2019 Все права защищены</div>
+            </div>
+        </div>
+    </section>
+    <div class="modal_sign" id="modal_sign">
+        <div class="exit">+</div>
+        <h2>Войдите в учетную запись</h2>
+        <span>
+            Пользователь не найден
+        </span>
+        <form action="">
+            <input type="text" placeholder="Логин" name="sign_login" id="sign_login">
+            <input type="password" placeholder="Пароль" name="sign_password" id="sign_password">
+            <div class="">
+                <input type="submit" value="Вход" class="sign_submit">
+                <a href="#" id="registation_butn">Регистрация</a>
+            </div>
+        </form>
+        <div class="reset">
+            <a href="#">Восстановление доступа</a>
+        </div>
+        <div class="sign-social">
+            <div class="sign-social-text">
+                Войдите через социальные сети
+            </div>
+            <div class="">
+                <a href="#">Facebook</a>
+                <a href="#">Google</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal_sign modal_reg" id="modal_reg">
+        <div class="exit">+</div>
+        <h2>Регистрация</h2>
+        <div class="choose">
+            <div class="active">
+                Пользователь
+            </div>
+            <div class="">
+                Компания
+            </div>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Логин" name="reg_login" id="reg_login">
+            <input type="email" placeholder="Почта" name="reg_email" id="reg_email">
+            <input type="number" placeholder="Телефон" name="reg_number" id="reg_number">
+            <input type="password" placeholder="Пароль" name="reg_password" id="reg_password">
+            <input type="password" placeholder="Повторить пароль" name="reg_password_2" id="reg_password_2">
+            <div class="">
+                <input type="checkbox" name="soglasie" id="soglasie">
+                <label for="soglasie">Подтверждая вы соглашаетесь с политикой<br> конфиденциальности</label>
+            </div>
+            <input type="submit" value="Регистрация" class="reg_submit">
+            
+        </form>
+    </div>
+    <div class="modal_sign modal_reg modal_otziv" id="modal_otziv">
+            <div class="exit">+</div>
+            <h2>Написать отзыв</h2>
+
+            <form action="">
+                <input type="email" placeholder="Почта" name="otziv_email" id="otziv_email">
+                <textarea name="otziv" id="otziv"  placeholder="Текст сообщения" ></textarea>
+                <input type="submit" value="Отправить" class="reg_submit">
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
+    <script src="./js/detect.min.js"></script>
+    <script src="./libs/slick/slick.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

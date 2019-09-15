@@ -260,4 +260,44 @@ $(document).ready(function() {
             $("#incorrectDevice").fadeIn(500);
         }
     });
+    $(".search-list_2").mCustomScrollbar({
+        setWidth: false,
+        setHeight: false,
+        scrollbarPosition: "outside",
+        mouseWheel:{ scrollAmount: "50" }
+    });
+    $('.modal_sign').hide();
+    $(".butn-auth-sign").click(function() {
+        $('.modal_sign').hide();
+        $('#modal_sign').show();
+        $('body').css('overflow', 'hidden');
+      });
+    $('.exit').click(function(){
+        $(this).closest('.modal_sign').hide();
+        $('body').css('overflow', 'visible');
+    });
+    $(".butn-auth-reg").click(function() {
+        $('.modal_sign').hide();
+        $('#modal_reg').show();
+        $('body').css('overflow', 'hidden');
+    });
+    $("#add_otziv").click(function() {
+        $('.modal_sign').hide();
+        $('#modal_otziv').show();
+        $('body').css('overflow', 'hidden');
+    });
+    $('.comments-sort div').click(function(){
+        $(this).toggleClass('active').siblings().removeClass('active');
+    });
+    $('.comments-sort-2 div').click(function(){
+        $(this).toggleClass('active').siblings().removeClass('active');
+    });
+    $('.choose div').click(function(){
+        $(this).toggleClass('active').siblings().removeClass('active');
+    });
+    $("#registation_butn").click(function() {
+        $('#modal_sign').hide();
+        $('#modal_reg').show();
+    });
+    
 });
